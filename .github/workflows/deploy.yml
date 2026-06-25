@@ -1,0 +1,58 @@
+name: Build and deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}   # allow manual runs from the Actions tab
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive   # harmless if theme is vendored, needed if it's a submodule
+          fetch-depth: 0          # full history so .GitInfo / lastmod work
+
+      - name: Setup Hugo (extended)
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.128.0'   # pin for reproducible builds; bump deliberately
+          extended: true
+
+      - name: Build
+        run: hugo --gc --minify --baseURL "https://xiaolan.in/"
+
+      # ---- Deploy over SSH/rsync (Hostinger Business plan supports SSH) ----
+      # Required repo secrets (Settings -> Secrets and variables -> Actions):
+      #   SSH_HOST      e.g. 145.223.77.126  (or your hostinger ssh host)
+      #   SSH_USER      your hPanel SSH username (uXXXXXXXXX)
+      #   SSH_PORT      Hostinger SSH port (often 65002, check hPanel -> Advanced -> SSH Access)
+      #   SSH_KEY       a private key whose public half is added in hPanel SSH Access
+      #   DEPLOY_PATH   absolute path to the docroot, e.g. /home/uXXXXXXXXX/domains/xiaolan.in/public_html
+      - name: Deploy via rsync over SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          ssh-keyscan -p "${{ secrets.SSH_PORT }}" "${{ secrets.SSH_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/id_deploy -p ${{ secrets.SSH_PORT }}" \
+            ./public/ \
+            "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}/"
+
+      # ---- FALLBACK: if your plan is FTP-only, comment out the rsync step above
+      #      and uncomment this one. Needs FTP_SERVER / FTP_USERNAME / FTP_PASSWORD secrets.
+      # - name: Deploy via FTP (fallback)
+      #   uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      #   with:
+      #     server: ${{ secrets.FTP_SERVER }}
+      #     username: ${{ secrets.FTP_USERNAME }}
+      #     password: ${{ secrets.FTP_PASSWORD }}
+      #     local-dir: ./public/
+      #     server-dir: ./public_html/

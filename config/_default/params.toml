@@ -1,0 +1,50 @@
+orgName = "NASA Jet Propulsion Laboratory"
+orgLocal = "Pasadena, CA"
+description = "Xiaolan Xu — Research Scientist at NASA JPL. Microwave remote sensing of the land surface: soil moisture, snow, and freeze-thaw."
+favicon = "/img/favicon.ico"
+logo = ""  # empty = use the site title text as the logo
+mainSections = ["blog", "project", "talk"]
+navallcaps = true
+socialInHeader = false
+socialInFooter = true
+sharing_image = "/img/profile.jpg"
+
+# built-in color theme: earth/forest/grayscale/magma/paper/peach/plum/poppy/primer/sky/violet/water
+theme = "water"
+custom_theme = ""
+
+# fonts: serif (Fraunces/EB Garamond/Bitter), sans (Commissioner/Atkinson Hyperlegible/Metropolis)
+customtextFontFamily = "Atkinson Hyperlegible"
+customheadingFontFamily = "Fraunces"
+textFontFamily = "sans-serif"
+headingFontFamily = "sans-serif"
+
+comments = false
+
+  [math]
+    renderer = "katex"
+
+  [[social]]
+    icon = "google-scholar"
+    icon_pack = "ai"
+    url = "https://scholar.google.com/"
+  [[social]]
+    icon = "orcid"
+    icon_pack = "ai"
+    url = "https://orcid.org/0000-0003-4321-7931"
+  [[social]]
+    icon = "clarivate"
+    icon_pack = "ai"
+    url = "https://www.webofscience.com/wos/author/record/U-3654-2018"
+  [[social]]
+    icon = "researchgate"
+    icon_pack = "ai"
+    url = "https://www.researchgate.net/"
+  [[social]]
+    icon = "github"
+    icon_pack = "fab"
+    url = "https://github.com/"
+  [[social]]
+    icon = "envelope"
+    icon_pack = "fas"
+    url = "mailto:xiaolan.xu@jpl.nasa.gov"

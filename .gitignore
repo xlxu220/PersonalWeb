@@ -1,0 +1,17 @@
+# Hugo build output
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+
+# Node (only if you add tooling later)
+node_modules/
+
+# Do NOT commit secrets or backups
+*.env
+wp-backup/
+DEPLOY.md          # contains your server connection details — keep private
+IMG_*.jpeg         # raw source images (processed copies live in static/img)

@@ -1,0 +1,33 @@
+[[header]]
+  name = "About"
+  url = "/about/"
+  weight = 1
+[[header]]
+  name = "Research"
+  url = "/research/"
+  weight = 2
+[[header]]
+  name = "Projects"
+  url = "/project/"
+  weight = 3
+[[header]]
+  name = "Publications"
+  url = "/publication/"
+  weight = 4
+[[header]]
+  name = "Talks"
+  url = "/talk/"
+  weight = 5
+[[header]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 6
+[[header]]
+  name = "CV"
+  url = "/cv/"
+  weight = 7
+
+[[footer]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 1
