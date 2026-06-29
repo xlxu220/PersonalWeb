@@ -13,5 +13,6 @@ node_modules/
 # Do NOT commit secrets or backups
 *.env
 wp-backup/
-DEPLOY.md          # contains your server connection details — keep private
-IMG_*.jpeg         # raw source images (processed copies live in static/img)
+_docs/DEPLOY.md    # contains your server connection details — keep private
+_design/           # raw source images (processed copies live in static/img)
+.hugo_build*.lock  # temp build files
