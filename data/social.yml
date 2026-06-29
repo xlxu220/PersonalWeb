@@ -1,0 +1,34 @@
+# ── Profile / social links ──────────────────────────────────────────
+# SINGLE SOURCE OF TRUTH for the icons in the homepage hero AND the footer.
+# To add, remove, or reorder a link, just edit this list (order = display order).
+#   icon       : academicons or font-awesome icon name
+#   icon_pack  : "ai" (academicons) · "fab" (brands) · "fas" (solid)
+# ────────────────────────────────────────────────────────────────────
+
+- icon: google-scholar
+  icon_pack: ai
+  url: https://scholar.google.com/citations?user=TGNYXa8AAAAJ&hl=en
+
+- icon: researcherid          # Web of Science / ResearcherID
+  icon_pack: ai
+  url: https://www.webofscience.com/wos/author/record/U-3654-2018
+
+- icon: orcid
+  icon_pack: ai
+  url: https://orcid.org/0000-0003-4321-7931
+
+- icon: linkedin
+  icon_pack: fab
+  url: https://www.linkedin.com/in/xiaolanxu/
+
+- icon: envelope
+  icon_pack: fas
+  url: mailto:xiaolan.xu@jpl.nasa.gov
+
+# Not live yet — uncomment and fill in the URL when ready:
+# - icon: researchgate
+#   icon_pack: ai
+#   url: https://www.researchgate.net/profile/<your-id>
+# - icon: github
+#   icon_pack: fab
+#   url: https://github.com/<your-username>

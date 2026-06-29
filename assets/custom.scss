@@ -1,0 +1,355 @@
+// ===== xiaolan.in custom styling =====
+// Project override of the theme's empty custom.scss.
+// Palette vars ($...Custom) come from assets/calm-hex.scss.
+// Warm-minimal direction modeled on apreshill.com.
+
+// ---------- Self-hosted fonts ----------
+@font-face {
+  font-family: 'Open Sauce One'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/fonts/osone-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Open Sauce One'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url('/fonts/osone-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Open Sauce One'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('/fonts/osone-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('/fonts/inter-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap;
+  src: url('/fonts/inter-500.woff2') format('woff2');
+}
+
+$heading-stack: 'Open Sauce One', 'Inter', system-ui, sans-serif;
+
+// Geometric headings everywhere they appear
+.site-brand { font-family: $heading-stack; font-weight: 600; }
+
+// ---------- Homepage hero (4-column asymmetric layout) ----------
+.home-hero {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 1100px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: grid;
+  grid-template-columns: 1fr 300px;  // Text | Headshot
+  column-gap: 3rem;
+  align-items: center;
+}
+
+// Headshot + social, right column
+.home-hero-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.home-avatar {
+  width: 215px !important;
+  height: 215px !important;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #0D8758;  // Ivy Green
+}
+
+.home-hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-name {
+  font-family: $heading-stack;
+  font-size: 2.7rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 0 0 0.4rem;
+  color: $headlineColorCustom;
+}
+.home-role {
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin: 0 0 1.3rem;
+  color: $footerTextColorCustom;
+}
+.home-lead {
+  font-family: $heading-stack;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.14;
+  margin: 0 0 0.55rem;
+  color: $headlineColorCustom;
+
+  .jpl-red {
+    color: #CD212A;  // JPL signature red
+  }
+}
+.home-tagline {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin: 0 0 1.1rem;
+  color: $textColorCustom;
+  max-width: 52ch;
+}
+
+// Intent routing prose (Kelly-style "Here to collaborate?" lines)
+.home-routes {
+  margin: 0.4rem 0 0.2rem;
+  p {
+    font-size: 1.0rem;
+    line-height: 1.5;
+    margin: 0 0 0.55rem;
+    color: $textColorCustom;
+  }
+  strong {
+    font-family: $heading-stack;
+    font-weight: 600;
+    color: $headlineColorCustom;
+  }
+  a {
+    color: $bodyLinkColorCustom;
+    text-decoration: none;
+    border-bottom: 1.5px solid rgba(13, 135, 88, 0.28);
+  }
+  a:hover { border-bottom-color: $bodyLinkColorCustom; }
+}
+.home-readmore {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-family: $heading-stack;
+  font-weight: 600;
+  font-size: 1.0rem;
+  color: $bodyLinkColorCustom;
+  text-decoration: none;
+}
+.home-readmore:hover { text-decoration: underline; }
+
+// ---------- Door navigation (3-up row below the hero) ----------
+.home-doors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+.door {
+  display: block;
+  padding: 1.8rem 2rem;
+  border-top: 1px solid #E6E7E4;
+  border-right: 1px solid #E6E7E4;
+  border-bottom: 1px solid #E6E7E4;
+  border-radius: 4px;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.door:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(5, 22, 30, 0.08);
+}
+.door-label {
+  font-family: $heading-stack;
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: $headlineColorCustom;
+  margin-bottom: 0.25rem;
+}
+.door-sub {
+  display: block;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: $footerTextColorCustom;
+}
+
+// Individual door colors (JPL-style left accent bars)
+.door-research {
+  border-left: 5px solid #0F7EB1;  // Earth Blue
+  background-color: rgba(15, 126, 177, 0.15);
+}
+.door-missions {
+  border-left: 5px solid #0D8758;  // Ivy Green
+  background-color: rgba(13, 135, 88, 0.15);
+}
+.door-writing {
+  border-left: 5px solid #E89B8F;  // Soft coral
+  background-color: rgba(232, 155, 143, 0.15);
+}
+.door-about {
+  border-left: 5px solid #9B8FB8;  // Cool lavender
+  background-color: rgba(155, 143, 184, 0.15);
+}
+
+// Intent doors (current homepage)
+.door-collab {
+  border-left: 5px solid #0F7EB1;  // Earth Blue
+  background-color: rgba(15, 126, 177, 0.15);
+}
+.door-mission {
+  border-left: 5px solid #0D8758;  // Ivy Green
+  background-color: rgba(13, 135, 88, 0.15);
+}
+.door-science {
+  border-left: 5px solid #E89B8F;  // Soft coral
+  background-color: rgba(232, 155, 143, 0.15);
+}
+
+// ---------- Collection page header (tighten intro block + reduce gap to cards) ----------
+// Applies to /talk/, /project/, etc. — any list-sidebar layout
+.list-sidebar .article-header {
+  margin-bottom: 1.5rem;  // Reduced from default ~3rem → cards
+}
+.list-sidebar .page-title {
+  margin-bottom: 0.6rem;  // Tighter title → subtitle spacing
+}
+.list-sidebar .page-subtitle {
+  margin-bottom: 0.4rem;  // Tighter subtitle → description spacing
+}
+.list-sidebar .page-description {
+  margin-bottom: 0;       // Remove extra bottom margin
+}
+
+// ---------- Sidebar-left landing pages (Research, Missions, Collaborate) ----------
+// Sidebar on the left (cols 1–2), content on the right (cols 3–6).
+.sidebar-left {
+  .page-sidebar { grid-column: 1 / 3; }
+  .page-main    { grid-column: 3 / 7; }
+}
+.sidebar-left .page-sidebar {
+  .blog-info { border-right: 1px solid $borderColorCustom; }
+  h1 { font-family: $heading-stack; }
+  a.link {
+    color: $bodyLinkColorCustom;
+    text-decoration: none;
+    border-bottom: 1.5px solid rgba(13, 135, 88, 0.28);
+  }
+  a.link:hover { border-bottom-color: $bodyLinkColorCustom; }
+}
+
+// ---------- Topic hub (Research): summary sidebar left, door grid right ----------
+.topic-hub {
+  .page-sidebar { grid-column: 1 / 3; }
+  .page-main    { grid-column: 3 / 7; }
+  .page-sidebar .blog-info { border-right: 1px solid $borderColorCustom; }
+}
+// Listing rows (Apéro /learn/ style): stacked one-per-row, text left + image right
+.research-doors {
+  display: flex;
+  flex-direction: column;
+}
+.rcard {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.8rem 0;
+  border-bottom: 1px solid $borderColorCustom;
+}
+.rcard:first-child { padding-top: 0.5rem; }
+.rcard-body { flex: 1; min-width: 0; }
+.rcard-tag {
+  font-family: $heading-stack;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $footerTextColorCustom;
+  margin: 0 0 0.5rem;
+}
+.rcard-title {
+  display: inline-block;
+  font-family: $heading-stack;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: $bodyLinkColorCustom;
+  text-decoration: none;
+  margin-bottom: 0.6rem;
+}
+.rcard-title:hover { text-decoration: underline; }
+.rcard-sub { font-size: 1rem; line-height: 1.5; color: $textColorCustom; margin: 0; max-width: 46ch; }
+.rcard-piclink { display: block; flex-shrink: 0; width: 300px; }
+.rcard-pic {
+  display: block;
+  width: 300px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid $borderColorCustom;
+}
+
+// ---------- Topic page (intro + related links sidebar + HTML talk embed) ----------
+.topic-page {
+  .page-sidebar { grid-column: 1 / 3; }
+  .page-main    { grid-column: 3 / 7; }
+  .page-sidebar .blog-info { border-right: 1px solid $borderColorCustom; }
+}
+.talk-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;        // 16:9
+  border: 1px solid $borderColorCustom;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+  background: $siteBgColorCustom;
+}
+.talk-frame iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+.talk-open {
+  font-family: $heading-stack;
+  font-weight: 600;
+  color: $bodyLinkColorCustom;
+  text-decoration: none;
+}
+.talk-open:hover { text-decoration: underline; }
+
+// ---------- Responsive ----------
+@media screen and (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;  // Stack single column on smaller screens
+    gap: 2rem;
+  }
+  .home-hero-img { order: -1; }  // Headshot on top when stacked
+  .home-doors { grid-template-columns: 1fr; }
+  .home-avatar { width: 160px !important; height: 160px !important; }
+  .home-name { font-size: 2.2rem; }
+  .home-lead { font-size: 1.35rem; }
+}
+@media screen and (max-width: 768px) {
+  .sidebar-left .page-main,
+  .sidebar-left .page-sidebar { grid-column: 1 / 7; }
+  .sidebar-left .page-main { order: 3; }
+  .sidebar-left .page-sidebar { order: 2; }
+  .sidebar-left .page-sidebar .blog-info { border-right: 0; }
+
+  .topic-hub .page-main,
+  .topic-hub .page-sidebar { grid-column: 1 / 7; }
+  .topic-hub .page-main { order: 3; }
+  .topic-hub .page-sidebar { order: 2; }
+  .topic-hub .page-sidebar .blog-info { border-right: 0; }
+
+  .topic-page .page-main,
+  .topic-page .page-sidebar { grid-column: 1 / 7; }
+  .topic-page .page-main { order: 3; }
+  .topic-page .page-sidebar { order: 2; }
+  .topic-page .page-sidebar .blog-info { border-right: 0; }
+
+  .rcard { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .rcard-piclink, .rcard-pic { width: 100%; }
+  .rcard-pic { height: 190px; }
+}

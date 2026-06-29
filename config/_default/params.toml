@@ -9,42 +9,21 @@ socialInHeader = false
 socialInFooter = true
 sharing_image = "/img/profile.jpg"
 
-# built-in color theme: earth/forest/grayscale/magma/paper/peach/plum/poppy/primer/sky/violet/water
-theme = "water"
-custom_theme = ""
+# custom "earth" palette lives in assets/earth-hex.scss (theme must be empty for custom to apply)
+# Earth Elements: Ivy Green primary · Earth Blue Darkest text · Mylar Gold highlights
+theme = ""
+custom_theme = "earth-hex"
 
-# fonts: serif (Fraunces/EB Garamond/Bitter), sans (Commissioner/Atkinson Hyperlegible/Metropolis)
-customtextFontFamily = "Atkinson Hyperlegible"
-customheadingFontFamily = "Fraunces"
-textFontFamily = "sans-serif"
-headingFontFamily = "sans-serif"
+# warm-geometric headings (Open Sauce One) + neutral body (Inter); self-hosted in static/fonts, @font-face in assets/custom.scss
+customtextFontFamily = "Inter"
+customheadingFontFamily = "Open Sauce One"
+textFontFamily = ""
+headingFontFamily = ""
 
 comments = false
 
   [math]
     renderer = "katex"
 
-  [[social]]
-    icon = "google-scholar"
-    icon_pack = "ai"
-    url = "https://scholar.google.com/"
-  [[social]]
-    icon = "orcid"
-    icon_pack = "ai"
-    url = "https://orcid.org/0000-0003-4321-7931"
-  [[social]]
-    icon = "clarivate"
-    icon_pack = "ai"
-    url = "https://www.webofscience.com/wos/author/record/U-3654-2018"
-  [[social]]
-    icon = "researchgate"
-    icon_pack = "ai"
-    url = "https://www.researchgate.net/"
-  [[social]]
-    icon = "github"
-    icon_pack = "fab"
-    url = "https://github.com/"
-  [[social]]
-    icon = "envelope"
-    icon_pack = "fas"
-    url = "mailto:xiaolan.xu@jpl.nasa.gov"
+  # Social / profile links are managed in data/social.yml (single source of truth,
+  # used by both the homepage hero and the footer). Do not re-add [[social]] here.

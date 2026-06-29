@@ -10,9 +10,15 @@ Thumbs.db
 # Node (only if you add tooling later)
 node_modules/
 
+# Claude local cache
+.claude/
+
 # Do NOT commit secrets or backups
 *.env
 wp-backup/
-_docs/DEPLOY.md    # contains your server connection details — keep private
-_design/           # raw source images (processed copies live in static/img)
-.hugo_build*.lock  # temp build files
+# contains your server connection details — keep private
+_docs/DEPLOY.md
+# raw source images (processed copies live in static/img)
+_design/
+# temp build files
+.hugo_build*.lock

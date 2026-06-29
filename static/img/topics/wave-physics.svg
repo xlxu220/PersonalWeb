@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225" role="img" aria-label="Microwave wave physics">
+  <rect width="400" height="225" fill="#EEEDF6"/>
+  <line x1="0" y1="170" x2="400" y2="170" stroke="#05161E" stroke-width="2.4" opacity="0.6"/>
+  <g fill="none" stroke="#9B8FB8" stroke-width="3" stroke-linecap="round">
+    <path d="M120 170 A28 28 0 0 1 176 170"/>
+    <path d="M104 170 A44 44 0 0 1 192 170"/>
+    <path d="M88 170 A60 60 0 0 1 208 170"/>
+    <path d="M72 170 A76 76 0 0 1 224 170"/>
+  </g>
+  <g stroke="#05161E" stroke-width="2.6" stroke-linecap="round">
+    <line x1="148" y1="170" x2="252" y2="96"/>
+    <line x1="148" y1="170" x2="300" y2="128"/>
+    <line x1="148" y1="170" x2="276" y2="78"/>
+  </g>
+  <circle cx="148" cy="170" r="5.5" fill="#FCEB9D" stroke="#05161E" stroke-width="1.6"/>
+  <g fill="#9B8FB8"><circle cx="252" cy="96" r="3.4"/><circle cx="300" cy="128" r="3.4"/><circle cx="276" cy="78" r="3.4"/></g>
+</svg>

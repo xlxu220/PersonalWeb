@@ -1,0 +1,41 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="page-content">
+    {{ with .Params.intro }}<p class="f4 lh-copy measure-wide mt0 mb4">{{ . | markdownify }}</p>{{ end }}
+    <div class="research-doors">
+      {{ range .Params.doors }}
+      <article class="rcard">
+        <div class="rcard-body">
+          {{ with .tag }}<p class="rcard-tag">{{ . }}</p>{{ end }}
+          <a class="rcard-title" href="{{ .url | relURL }}"{{ with .accent }} style="color:{{ . }}"{{ end }}>{{ .name | safeHTML }}</a>
+          <p class="rcard-sub">{{ .sub }}</p>
+        </div>
+        {{ if .image }}
+        <a class="rcard-piclink" href="{{ .url | relURL }}" tabindex="-1" aria-hidden="true">
+          <img class="rcard-pic" src="{{ .image | relURL }}" alt="" loading="lazy">
+        </a>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+  <div class="blog-info ph4 pt4 pb4">
+    {{ with .Params.hub }}
+      {{ if .motif }}
+      <svg width="62" height="62" viewBox="0 0 48 48" class="db mb3" aria-hidden="true">
+        <path d="M14 7 A10 10 0 0 0 34 7" fill="none" stroke="#CD212A" stroke-width="2.7" stroke-linecap="round"/>
+        <path d="M9 7 A15 15 0 0 0 39 7" fill="none" stroke="#05161E" stroke-width="2.7" stroke-linecap="round"/>
+        <path d="M4 7 A20 20 0 0 0 44 7" fill="none" stroke="#CD212A" stroke-width="2.7" stroke-linecap="round" opacity=".42"/>
+        <circle cx="24" cy="7" r="3.4" fill="#0F7EB1" stroke="#05161E" stroke-width="1.1"/>
+        <path d="M5 41 Q24 32 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
+      </svg>
+      {{ end }}
+      {{ with .heading }}<h1 class="f2 mt0 lh-title">{{ . | markdownify }}</h1>{{ end }}
+    {{ end }}
+    <div class="f5 lh-copy measure research-summary">{{ .Content }}</div>
+    {{ with .Params.hub }}{{ with .badge }}<p class="mt3 mb0"><span class="dib br2 ph2 pv1 f7" style="background:#FCEB9D;color:#05161E;">{{ . | markdownify }}</span></p>{{ end }}{{ end }}
+  </div>
+</aside>
+{{ end }}

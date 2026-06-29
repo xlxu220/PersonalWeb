@@ -1,0 +1,43 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw8 center">
+
+    <div class="home-hero">
+      <div class="home-hero-text">
+        <h1 class="home-name">{{ .Params.title }}</h1>
+        {{ with .Params.subtitle }}<p class="home-role">{{ . }}</p>{{ end }}
+        {{ with .Params.lead }}<p class="home-lead">{{ . | safeHTML }}</p>{{ end }}
+        {{ with .Params.description }}<p class="home-tagline">{{ . }}</p>{{ end }}
+        <div class="home-routes">
+          <p><strong>Here to collaborate?</strong> I'm always open to <a href="{{ "/collaborate/" | relURL }}">proposals and algorithm partnerships</a>.</p>
+          <p><strong>Tracking a mission?</strong> See my work on <a href="{{ "/missions/" | relURL }}">SMAP, NISAR, and CYGNSS</a>.</p>
+          <p><strong>New to the field?</strong> Start with <a href="{{ "/research/" | relURL }}">the science, explained</a>.</p>
+        </div>
+        <a class="home-readmore" href="{{ "/about/" | relURL }}">Read more about me &rarr;</a>
+      </div>
+      <div class="home-hero-img">
+        {{ with .Params.images }}
+          {{ range first 1 . }}<img class="home-avatar" src="{{ . | relURL }}" alt="{{ $.Params.title }}"/>{{ end }}
+        {{ end }}
+        {{ if .Params.show_social_links }}{{ partial "shared/social-links.html" . }}{{ end }}
+      </div>
+    </div>
+
+    <nav class="home-doors" aria-label="Explore the site">
+      <a class="door door-collab" href="{{ "/collaborate/" | relURL }}">
+        <span class="door-label">Collaborate</span>
+        <span class="door-sub">Proposals &middot; algorithm partnerships &middot; co&#8209;I work</span>
+      </a>
+      <a class="door door-mission" href="{{ "/missions/" | relURL }}">
+        <span class="door-label">Mission Work</span>
+        <span class="door-sub">SMAP &middot; NISAR &middot; CYGNSS &middot; Aquarius</span>
+      </a>
+      <a class="door door-science" href="{{ "/research/" | relURL }}">
+        <span class="door-label">The Science</span>
+        <span class="door-sub">Soil moisture &middot; Snow &middot; Freeze&ndash;thaw</span>
+      </a>
+    </nav>
+
+  </section>
+</main>
+{{ end }}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225" role="img" aria-label="Freeze and thaw">
+  <rect width="200" height="225" fill="#E3EFF7"/>
+  <rect x="200" width="200" height="225" fill="#F7E9E4"/>
+  <path d="M0 165 L400 165 L400 225 L0 225 Z" fill="#05161E" opacity="0.06"/>
+  <g fill="none" stroke="#0F7EB1" stroke-width="3.4" stroke-linejoin="round">
+    <polygon points="100,58 126,73 126,103 100,118 74,103 74,73"/>
+  </g>
+  <line x1="100" y1="73" x2="100" y2="103" stroke="#0F7EB1" stroke-width="2.2"/>
+  <line x1="83" y1="83" x2="117" y2="93" stroke="#0F7EB1" stroke-width="2.2"/>
+  <line x1="117" y1="83" x2="83" y2="93" stroke="#0F7EB1" stroke-width="2.2"/>
+  <path d="M300 60 c-20 26 -20 46 0 46 c20 0 20 -20 0 -46 z" fill="#E89B8F"/>
+  <line x1="200" y1="30" x2="200" y2="195" stroke="#05161E" stroke-width="2" stroke-dasharray="5 7" opacity="0.5"/>
+</svg>

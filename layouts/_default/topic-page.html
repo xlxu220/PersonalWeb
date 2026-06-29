@@ -1,0 +1,41 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <header class="post-header">
+      {{ with .Params.tag }}<p class="f7 ttu tracked mb2" style="color:#2D454D;">{{ . }}</p>{{ end }}
+      <h1 class="f1 lh-solid mb3 fw4">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}<h4 class="f4 mt0 mb4 lh-title measure">{{ . }}</h4>{{ end }}
+    </header>
+
+    {{ with .Params.talk }}
+    <div class="talk-embed mv4">
+      <div class="talk-frame">
+        <iframe src="{{ .url | relURL }}" title="{{ $.Title }} — talk" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <a class="talk-open" href="{{ .url | relURL }}" target="_blank" rel="noopener">Open &amp; share the talk &rarr;</a>
+    </div>
+    {{ end }}
+
+    <section class="post-body pt2 pb4">
+      {{ .Content }}
+    </section>
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+  <div class="blog-info ph4 pt4 pb4">
+    {{ with .Params.related }}
+      {{ range . }}
+      <div class="mt3">
+        {{ with .heading }}<p class="f7 ttu tracked mb1" style="color:#2D454D;">{{ . }}</p>{{ end }}
+        <ul class="list pl0 mv0">
+          {{ range .items }}<li class="mb2"><a class="link" href="{{ .url | relURL }}">{{ .name }} &rarr;</a></li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    {{ end }}
+    <div class="mt4 pt3" style="border-top:1px solid #E6E7E4;">
+      <a class="link" href="{{ "/research/" | relURL }}">&larr; All research</a>
+    </div>
+  </div>
+</aside>
+{{ end }}

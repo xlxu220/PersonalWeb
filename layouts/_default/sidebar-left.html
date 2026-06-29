@@ -1,0 +1,77 @@
+{{ define "main" }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 pl3-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid mb3 fw4">{{ with .Params.headline }}{{ . | markdownify }}{{ else }}{{ .Title }}{{ end }}</h1>
+        {{ with .Params.subtitle }}<h4 class="f4 mt0 mb4 lh-title measure">{{ . }}</h4>{{ end }}
+      </header>
+      <section class="post-body pt4 pb4">
+        {{ .Content }}
+      </section>
+    </article>
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+  {{ with .Params.sidebar }}
+  <div class="blog-info ph4 pt4 pb4">
+
+    {{ with .image }}<img src="{{ . | relURL }}" class="db ma0 mb3 br-100" style="width:150px;height:150px;object-fit:cover;border:3px solid #0D8758;" alt="">{{ end }}
+
+    {{ if .motif }}
+      <svg width="62" height="62" viewBox="0 0 48 48" class="db mb3" aria-hidden="true">
+        <path d="M14 7 A10 10 0 0 0 34 7" fill="none" stroke="#CD212A" stroke-width="2.7" stroke-linecap="round"/>
+        <path d="M9 7 A15 15 0 0 0 39 7" fill="none" stroke="#05161E" stroke-width="2.7" stroke-linecap="round"/>
+        <path d="M4 7 A20 20 0 0 0 44 7" fill="none" stroke="#CD212A" stroke-width="2.7" stroke-linecap="round" opacity=".42"/>
+        <circle cx="24" cy="7" r="3.4" fill="#0F7EB1" stroke="#05161E" stroke-width="1.1"/>
+        <path d="M5 41 Q24 32 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
+      </svg>
+    {{ end }}
+
+    {{ with .title }}<h1 class="f3 mt0">{{ . | markdownify }}</h1>{{ end }}
+    {{ with .description }}<p class="f6 lh-copy measure">{{ . | markdownify }}</p>{{ end }}
+
+    {{ with .badge }}<p class="mt3 mb0"><span class="dib br2 ph2 pv1 f7" style="background:#FCEB9D;color:#05161E;">{{ . | markdownify }}</span></p>{{ end }}
+
+    {{ with .jumplinks }}
+      <nav class="mt3" aria-label="On this page">
+        <ul class="list pl0 mv0">
+          {{ range . }}<li class="mb2"><a class="link" href="#{{ .anchor }}">{{ .name }} &rarr;</a></li>{{ end }}
+        </ul>
+      </nav>
+    {{ end }}
+
+    {{ with .lists }}
+      {{ range . }}
+      <div class="mt3">
+        {{ with .heading }}<p class="f7 ttu tracked mb1" style="color:#2D454D;">{{ . }}</p>{{ end }}
+        <ul class="list pl0 mv0">
+          {{ range .items }}<li class="f6 lh-copy mb1">{{ . | markdownify }}</li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    {{ end }}
+
+    {{ with .contact }}
+      <div class="mt3 pt3" style="border-top:1px solid #E6E7E4;">
+        {{ with .email }}<p class="f6 mb2"><a class="link" href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+        {{ with .links }}
+          <ul class="list pl0 mv0">
+            {{ range . }}<li class="mb1"><a class="link" href="{{ .url }}">{{ .name }} &rarr;</a></li>{{ end }}
+          </ul>
+        {{ end }}
+      </div>
+    {{ end }}
+
+    {{ with .links }}
+      <div class="mt3 pt3" style="border-top:1px solid #E6E7E4;">
+        <ul class="list pl0 mv0">
+          {{ range . }}<li class="mb2"><a class="link" href="{{ .url | relURL }}">{{ .name }} &rarr;</a></li>{{ end }}
+        </ul>
+      </div>
+    {{ end }}
+
+  </div>
+  {{ end }}
+</aside>
+{{ end }}

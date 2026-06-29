@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225" role="img" aria-label="Closing the loop: an infinity between physics and data">
+  <rect width="400" height="225" fill="#FBF6DD"/>
+  <path d="M200 103 C 200 58, 116 58, 116 103 C 116 148, 200 148, 200 103" fill="none" stroke="#CD212A" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M200 103 C 200 58, 284 58, 284 103 C 284 148, 200 148, 200 103" fill="none" stroke="#0F7EB1" stroke-width="4.2" stroke-linecap="round"/>
+  <polygon points="141,61 153,56 153,67" fill="#CD212A"/>
+  <polygon points="259,61 247,56 247,67" fill="#0F7EB1"/>
+  <g font-family="'Open Sauce One',system-ui,sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#05161E">
+    <text x="135" y="182">physics</text>
+    <text x="265" y="182">data</text>
+  </g>
+</svg>

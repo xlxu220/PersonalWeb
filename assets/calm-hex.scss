@@ -1,0 +1,19 @@
+// "quiet" — warm-minimal monochrome palette for xiaolan.in
+// Modeled on apreshill.com: pure white ground · charcoal text · no accent color
+// (filename keeps 'hex' so the theme loads it as a hex-based palette)
+
+$siteBgColorCustom:          #FFFFFF;  // pure white
+$sidebarBgColorCustom:       #F5F4F2;  // warm light grey (secondary surfaces)
+$textColorCustom:            #242629;  // soft charcoal
+$sidebarTextColorCustom:     #242629;
+$headlineColorCustom:        #242629;  // monochrome — hierarchy comes from size/weight
+$headingColorCustom:         #242629;
+$bodyLinkColorCustom:        #242629;  // links = charcoal + underline, no blue
+$navLinkColorCustom:         #242629;
+$sidebarLinkColorCustom:     #242629;
+$footerTextColorCustom:      #6E6E70;  // muted grey
+$buttonTextColorCustom:      #FFFFFF;
+$buttonHoverTextColorCustom: #FFFFFF;
+$buttonBgColorCustom:        #242629;
+$buttonHoverBgColorCustom:   #000000;
+$borderColorCustom:          #E7E6E3;  // soft warm border
