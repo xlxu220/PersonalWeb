@@ -278,14 +278,22 @@ $heading-stack: 'Open Sauce One', 'Inter', system-ui, sans-serif;
 }
 .rcard-title:hover { text-decoration: underline; }
 .rcard-sub { font-size: 1rem; line-height: 1.5; color: $textColorCustom; margin: 0; max-width: 46ch; }
-.rcard-piclink { display: block; flex-shrink: 0; width: 300px; }
+.rcard-figure { flex-shrink: 0; width: 300px; margin: 0; }
+.rcard-piclink { display: block; }
 .rcard-pic {
   display: block;
-  width: 300px;
+  width: 100%;
   height: 170px;
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid $borderColorCustom;
+}
+.rcard-credit {
+  font-size: 0.68rem;
+  line-height: 1.3;
+  color: $footerTextColorCustom;
+  margin: 0.4rem 0 0;
+  text-align: right;
 }
 
 // ---------- Topic page (intro + related links sidebar + HTML talk embed) ----------
@@ -350,6 +358,7 @@ $heading-stack: 'Open Sauce One', 'Inter', system-ui, sans-serif;
   .topic-page .page-sidebar .blog-info { border-right: 0; }
 
   .rcard { flex-direction: column; align-items: flex-start; gap: 1rem; }
-  .rcard-piclink, .rcard-pic { width: 100%; }
+  .rcard-figure { width: 100%; }
   .rcard-pic { height: 190px; }
+  .rcard-credit { text-align: left; }
 }

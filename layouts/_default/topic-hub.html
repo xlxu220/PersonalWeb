@@ -11,9 +11,12 @@
           <p class="rcard-sub">{{ .sub }}</p>
         </div>
         {{ if .image }}
-        <a class="rcard-piclink" href="{{ .url | relURL }}" tabindex="-1" aria-hidden="true">
-          <img class="rcard-pic" src="{{ .image | relURL }}" alt="" loading="lazy">
-        </a>
+        <figure class="rcard-figure">
+          <a class="rcard-piclink" href="{{ .url | relURL }}" tabindex="-1" aria-hidden="true">
+            <img class="rcard-pic" src="{{ .image | relURL }}" alt="" loading="lazy">
+          </a>
+          {{ with .credit }}<figcaption class="rcard-credit">{{ . }}</figcaption>{{ end }}
+        </figure>
         {{ end }}
       </article>
       {{ end }}

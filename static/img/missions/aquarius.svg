@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225" role="img" aria-label="Aquarius/SAC-D — reflector dish, feedhorn instrument, cylindrical bus and solar panels; three radiometer beams to footprints on the surface (placeholder)">
+  <rect width="400" height="225" fill="#F7E4E7"/>
+  <path d="M0 202 Q200 193 400 202 L400 225 L0 225 Z" fill="#BA0C2F" opacity="0.10"/>
+  <path d="M0 202 Q200 193 400 202" fill="none" stroke="#05161E" stroke-width="2" opacity="0.4"/>
+  <g fill="#ffffff" opacity="0.38">
+    <polygon points="168,108 184,196 210,199"/>
+    <polygon points="168,108 214,197 244,199"/>
+    <polygon points="168,108 245,197 281,199"/>
+  </g>
+  <g stroke="#BA0C2F" stroke-width="1" opacity="0.5" stroke-dasharray="2 3">
+    <line x1="168" y1="108" x2="196" y2="198"/><line x1="168" y1="108" x2="228" y2="198"/><line x1="168" y1="108" x2="263" y2="199"/>
+  </g>
+  <ellipse cx="196" cy="198" rx="13" ry="5" fill="#BA0C2F" opacity="0.28" stroke="#BA0C2F" stroke-width="1.1"/>
+  <ellipse cx="228" cy="198" rx="16" ry="6" fill="#BA0C2F" opacity="0.28" stroke="#BA0C2F" stroke-width="1.1"/>
+  <ellipse cx="263" cy="199" rx="19" ry="7" fill="#BA0C2F" opacity="0.28" stroke="#BA0C2F" stroke-width="1.1"/>
+  <circle cx="228" cy="198" r="3.2" fill="#FCEB9D" stroke="#05161E" stroke-width="1.1"/>
+  <g stroke="#BA0C2F" stroke-width="1.2" opacity="0.7" stroke-linecap="round">
+    <line x1="180" y1="211" x2="282" y2="213"/>
+    <polygon points="173,210 185,207 184,214" fill="#BA0C2F" stroke="none"/>
+    <polygon points="289,213 277,210 278,217" fill="#BA0C2F" stroke="none"/>
+  </g>
+  <g transform="rotate(-16 230 68)"><rect x="230" y="56" width="40" height="26" rx="1" fill="#3E3E3E"/><g stroke="#5E5E5E" stroke-width="0.7" opacity="0.8"><line x1="230" y1="69" x2="270" y2="69"/><line x1="240" y1="56" x2="240" y2="82"/><line x1="250" y1="56" x2="250" y2="82"/><line x1="260" y1="56" x2="260" y2="82"/></g></g>
+  <g transform="rotate(-4 236 100)"><rect x="236" y="90" width="40" height="24" rx="1" fill="#3E3E3E"/><g stroke="#5E5E5E" stroke-width="0.7" opacity="0.8"><line x1="236" y1="102" x2="276" y2="102"/><line x1="246" y1="90" x2="246" y2="114"/><line x1="256" y1="90" x2="256" y2="114"/><line x1="266" y1="90" x2="266" y2="114"/></g></g>
+  <rect x="186" y="83" width="46" height="23" rx="11.5" fill="#BA0C2F" opacity="0.85"/>
+  <ellipse cx="232" cy="94.5" rx="5.5" ry="11.5" fill="#8A0A20"/>
+  <g stroke="#7A0A20" stroke-width="0.8" opacity="0.6"><line x1="198" y1="83" x2="198" y2="106"/><line x1="208" y1="83" x2="208" y2="106"/><line x1="218" y1="83" x2="218" y2="106"/></g>
+  <rect x="186" y="83" width="46" height="23" rx="11.5" fill="none" stroke="#05161E" stroke-width="1"/>
+  <polygon points="155,83 181,83 187,94 181,106 155,106 149,94" fill="#D6D6D6" stroke="#BA0C2F" stroke-width="1"/>
+  <g stroke="#A8A8A8" stroke-width="0.8" opacity="0.7"><line x1="155" y1="83" x2="149" y2="94"/><line x1="181" y1="83" x2="187" y2="94"/><line x1="168" y1="83" x2="168" y2="106"/></g>
+  <g fill="#05161E">
+    <polygon points="158,104 166,104 164,111 160,111"/>
+    <polygon points="167,105 175,105 173,112 169,112"/>
+    <polygon points="176,104 184,104 182,111 178,111"/>
+  </g>
+  <line x1="140" y1="57" x2="161" y2="84" stroke="#05161E" stroke-width="1.8"/>
+  <line x1="144" y1="54" x2="165" y2="82" stroke="#05161E" stroke-width="1.8"/>
+  <line x1="150" y1="66" x2="157" y2="63" stroke="#05161E" stroke-width="1" opacity="0.8"/>
+  <g transform="rotate(-14 120 50)">
+    <ellipse cx="120" cy="50" rx="34" ry="12" fill="#BA0C2F" opacity="0.14" stroke="#BA0C2F" stroke-width="2.2"/>
+    <ellipse cx="120" cy="50" rx="22" ry="8" fill="none" stroke="#BA0C2F" stroke-width="1.2" opacity="0.6"/>
+    <ellipse cx="120" cy="50" rx="11" ry="4" fill="none" stroke="#BA0C2F" stroke-width="1" opacity="0.5"/>
+  </g>
+</svg>
