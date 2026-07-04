@@ -27,13 +27,7 @@
   <div class="blog-info ph4 pt4 pb4">
     {{ with .Params.hub }}
       {{ if .motif }}
-      <svg width="62" height="62" viewBox="0 0 48 48" class="db mb3" aria-hidden="true">
-        <path d="M14 7 A10 10 0 0 0 34 7" fill="none" stroke="#CD212A" stroke-width="2.7" stroke-linecap="round"/>
-        <path d="M9 7 A15 15 0 0 0 39 7" fill="none" stroke="#05161E" stroke-width="2.7" stroke-linecap="round"/>
-        <path d="M4 7 A20 20 0 0 0 44 7" fill="none" stroke="#CD212A" stroke-width="2.7" stroke-linecap="round" opacity=".42"/>
-        <circle cx="24" cy="7" r="3.4" fill="#0F7EB1" stroke="#05161E" stroke-width="1.1"/>
-        <path d="M5 41 Q24 32 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
-      </svg>
+      {{ partial "shared/logo-motif.html" . }}
       {{ end }}
       {{ with .heading }}<h1 class="f2 mt0 lh-title">{{ . | markdownify }}</h1>{{ end }}
     {{ end }}
