@@ -1,4 +1,9 @@
-# Publications data — rendered by layouts/page/publications.html
+# Publications data — rendered by layouts/publications.html
+# SOURCE OF TRUTH: 04_Outputs/01_Papers/Tracker_published.md and
+# Tracker_submitted.md. When a paper's status changes there, sync it here
+# (ask Claude: "sync the publications page from the paper trackers").
+# Last synced: 2026-07-03
+#
 # To add a paper: copy an entry, fill in the fields, done.
 # authors: markdown string; bold your own name with **Xu, X.**
 # url: verified DOI link (leave empty for under-review items)
@@ -26,6 +31,20 @@ sections:
   - title: "Soil Moisture & Freeze–Thaw"
     subtitle: "From SMAP freeze/thaw products to NISAR-era retrievals, newest first."
     papers:
+      - year: 2026
+        authors: "**Xu, X.**, Yueh, S. H., Huang, H., Wang, T., Das, N., Entekhabi, D., & Colliander, A."
+        title: "A Semi-Empirical Modeling for Soil Moisture Retrieval Using High-Resolution SAR Data"
+        venue: "IEEE JSTARS"
+        url: "https://doi.org/10.1109/JSTARS.2026.3682116"
+      - year: 2026
+        title: "L-band radar signatures of topography, soil moisture, and vegetation"
+        venue: "IEEE JSTARS"
+        url: "https://doi.org/10.1109/JSTARS.2026.3659111"
+      - year: 2025
+        authors: "Kumawat, D., Ebtehaj, A., **Xu, X.**, Colliander, A., & Kumar, V."
+        title: "An Autoencoder Architecture for L-band Passive Microwave Retrieval of Landscape Freeze-Thaw Cycle"
+        venue: "IEEE TGRS"
+        url: "https://doi.org/10.1109/TGRS.2025.3530356"
       - year: 2025
         authors: "Huang, X., Papale, L. G., Lavalle, M., Del Frate, F., Fattahi, H., Chan, S. K., Lohman, R. B., **Xu, X.**, & Kim, Y."
         title: "Optimizing the Radiative Transfer Model Using Deep Neural Networks for NISAR Soil Moisture Retrieval"
@@ -84,6 +103,12 @@ sections:
   - title: "Snow & SWE"
     subtitle: "Ten-plus years of radar remote sensing of snow water equivalent."
     papers:
+      - year: 2026
+        authors: "Yueh, S. H., **Xu, X.**, Wang, T., & Chaubell, M. J."
+        title: "Interferometric Coherence Modeling of Radar and Reflectometer Observations Related to the Temporal and Spatial Variabilities of Snow Depth and Rough Surface"
+        venue: "IEEE TGRS"
+        detail: "early access"
+        url: "https://doi.org/10.1109/TGRS.2026.3705987"
       - year: 2022
         authors: "Tsang, L., Durand, M., Derksen, C., Barros, A. P., Kang, D. H., Lievens, H., …, & **Xu, X.**"
         title: "Review article: Global monitoring of snow water equivalent using high-frequency radar remote sensing"
@@ -95,7 +120,7 @@ sections:
         title: "Remote Sensing of Snow Water Equivalent Using P-Band Coherent Reflection"
         venue: "IEEE GRSL"
         detail: "14(3), 309–313"
-        url: "https://doi.org/10.1109/LGRS.2016.2634527"
+        url: "https://doi.org/10.1109/LGRS.2016.2636664"
       - year: 2014
         authors: "Chang, W., Tan, S., Lemmetyinen, J., Tsang, L., **Xu, X.**, & Yueh, S. H."
         title: "Dense Media Radiative Transfer Applied to SnowScat and SnowSAR"
@@ -139,11 +164,11 @@ sections:
         venue: "Remote Sensing of Environment"
         status: "in review"
       - year: 2026
-        title: "InSAR-SWE Bayesian Data Assimilation"
+        title: "InSAR Phase Data Assimilation for Bayesian SWE Estimation"
         venue: "The Cryosphere"
-        status: "in review"
+        status: "preprint · in open review"
       - year: 2026
-        title: "SMAP Mission Overview"
+        title: "The NASA SMAP Earth Observation Satellite Mission"
         venue: "Proceedings of the IEEE"
         status: "in review"
 
