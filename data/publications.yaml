@@ -1,0 +1,158 @@
+# Publications data — rendered by layouts/page/publications.html
+# To add a paper: copy an entry, fill in the fields, done.
+# authors: markdown string; bold your own name with **Xu, X.**
+# url: verified DOI link (leave empty for under-review items)
+# Within each section, keep newest-first order.
+
+metrics:
+  - value: "~70"
+    label: "publications"
+  - value: "1,950"
+    label: "citations"
+  - value: "21"
+    label: "h-index"
+
+profiles:
+  - name: "Google Scholar"
+    url: "https://scholar.google.com/"
+  - name: "Web of Science"
+    url: "https://www.webofscience.com/wos/author/record/U-3654-2018"
+  - name: "ORCID"
+    url: "https://orcid.org/0000-0003-4321-7931"
+
+note: "Metrics are Google Scholar snapshots; the linked profiles are always current."
+
+sections:
+  - title: "Soil Moisture & Freeze–Thaw"
+    subtitle: "From SMAP freeze/thaw products to NISAR-era retrievals, newest first."
+    papers:
+      - year: 2025
+        authors: "Huang, X., Papale, L. G., Lavalle, M., Del Frate, F., Fattahi, H., Chan, S. K., Lohman, R. B., **Xu, X.**, & Kim, Y."
+        title: "Optimizing the Radiative Transfer Model Using Deep Neural Networks for NISAR Soil Moisture Retrieval"
+        venue: "IEEE JSTARS"
+        detail: "18, 12697–12712"
+        url: "https://doi.org/10.1109/JSTARS.2025.3568713"
+      - year: 2025
+        authors: "Kim, S.-B., **Xu, X.**, Kraatz, S., Colliander, A., Cosh, M. H., Kelly, V., & Siqueira, P."
+        title: "Soil Moisture Estimates Using L-Band Airborne SAR Over Forests Replicating NISAR Observations"
+        venue: "IEEE JSTARS"
+        detail: "18, 7364–7373"
+        url: "https://doi.org/10.1109/JSTARS.2025.3544095"
+      - year: 2025
+        authors: "Hodges, E., Chew, C. C., Small, E. E., Bai, D., Al-Khaldi, M. M., Ouellette, J. D., …, **Xu, X.**, et al."
+        title: "A Merged CYGNSS Soil Moisture Product Using a Minimum Variance Estimator"
+        venue: "IEEE TGRS"
+        detail: "63, 1–15"
+        url: "https://doi.org/10.1109/TGRS.2025.3597532"
+      - year: 2025
+        authors: "Colliander, A., Cosh, M. H., Bourgeau-Chavez, L., Kelly, V. R., Kraatz, S., Siqueira, P., …, **Xu, X.**, et al."
+        title: "SMAP Validation Experiment 2019–2022 (SMAPVEX19–22): Field Campaign to Improve Soil Moisture and Vegetation Optical Depth Retrievals in Temperate Forests"
+        venue: "IEEE JSTARS"
+        detail: "18, 10749–10771"
+        url: "https://doi.org/10.1109/JSTARS.2025.3553085"
+      - year: 2022
+        authors: "Yueh, S. H., Shah, R., Chaubell, M. J., Hayashi, A., **Xu, X.**, & Colliander, A."
+        title: "A Semiempirical Modeling of Soil Moisture, Vegetation, and Surface Roughness Impact on CYGNSS Reflectometry Data"
+        venue: "IEEE TGRS"
+        detail: "60"
+        url: "https://doi.org/10.1109/TGRS.2020.3035989"
+      - year: 2019
+        authors: "Kim, Y., Kimball, J. S., **Xu, X.**, Dunbar, R. S., Colliander, A., & Derksen, C."
+        title: "Global Assessment of the SMAP Freeze/Thaw Data Record and Regional Applications for Detecting Spring Onset and Frost Events"
+        venue: "Remote Sensing"
+        detail: "11(11), 1317"
+        url: "https://doi.org/10.3390/rs11111317"
+      - year: 2017
+        authors: "Derksen, C., **Xu, X.**, Dunbar, R. S., Colliander, A., Kim, Y., Kimball, J. S., et al."
+        title: "Retrieving landscape freeze/thaw state from Soil Moisture Active Passive (SMAP) radar and radiometer measurements"
+        venue: "Remote Sensing of Environment"
+        detail: "194, 48–62"
+        url: "https://doi.org/10.1016/j.rse.2017.03.007"
+      - year: 2016
+        authors: "**Xu, X.**, Derksen, C., Yueh, S. H., Dunbar, R. S., & Colliander, A."
+        title: "Freeze/Thaw Detection and Validation Using Aquarius' L-Band Backscattering Data"
+        venue: "IEEE JSTARS"
+        detail: "9(4), 1370–1381"
+        url: "https://doi.org/10.1109/JSTARS.2016.2519347"
+      - year: 2014
+        authors: "Kim, S., Moghaddam, M., Tsang, L., Burgin, M., **Xu, X.**, & Njoku, E. G."
+        title: "Models of L-Band Radar Backscattering Coefficients Over Global Terrain for Soil Moisture Retrieval"
+        venue: "IEEE TGRS"
+        detail: "52(2), 1381–1396"
+        url: "https://doi.org/10.1109/TGRS.2013.2250980"
+
+  - title: "Snow & SWE"
+    subtitle: "Ten-plus years of radar remote sensing of snow water equivalent."
+    papers:
+      - year: 2022
+        authors: "Tsang, L., Durand, M., Derksen, C., Barros, A. P., Kang, D. H., Lievens, H., …, & **Xu, X.**"
+        title: "Review article: Global monitoring of snow water equivalent using high-frequency radar remote sensing"
+        venue: "The Cryosphere"
+        detail: "16(9), 3531–3573"
+        url: "https://doi.org/10.5194/tc-16-3531-2022"
+      - year: 2017
+        authors: "Shah, R., **Xu, X.**, Yueh, S., Chae, C. S., Elder, K., Starr, B., & Kim, Y."
+        title: "Remote Sensing of Snow Water Equivalent Using P-Band Coherent Reflection"
+        venue: "IEEE GRSL"
+        detail: "14(3), 309–313"
+        url: "https://doi.org/10.1109/LGRS.2016.2634527"
+      - year: 2014
+        authors: "Chang, W., Tan, S., Lemmetyinen, J., Tsang, L., **Xu, X.**, & Yueh, S. H."
+        title: "Dense Media Radiative Transfer Applied to SnowScat and SnowSAR"
+        venue: "IEEE JSTARS"
+        detail: "7(9), 3811–3825"
+        url: "https://doi.org/10.1109/JSTARS.2014.2343519"
+
+  - title: "Electromagnetic Scattering Physics"
+    subtitle: "The wave physics underneath the retrievals."
+    papers:
+      - year: 2013
+        authors: "Tsang, L., Ding, K. H., Huang, S., & **Xu, X.**"
+        title: "Electromagnetic Computation in Scattering of Electromagnetic Waves by Random Rough Surface and Dense Media in Microwave Remote Sensing of Land Surfaces"
+        venue: "Proceedings of the IEEE"
+        detail: "101(2), 255–279"
+        url: "https://doi.org/10.1109/JPROC.2012.2214011"
+      - year: 2012
+        authors: "**Xu, X.**, Tsang, L., & Yueh, S."
+        title: "Electromagnetic Models of Co/Cross Polarization of Bicontinuous/DMRT in Radar Remote Sensing of Terrestrial Snow at X- and Ku-band for CoReH2O and SCLP Applications"
+        venue: "IEEE JSTARS"
+        detail: "5(3), 1024–1032"
+        url: "https://doi.org/10.1109/JSTARS.2012.2190719"
+      - year: 2010
+        authors: "Ding, K. H., **Xu, X.**, & Tsang, L."
+        title: "Electromagnetic Scattering by Bicontinuous Random Microstructures With Discrete Permittivities"
+        venue: "IEEE TGRS"
+        detail: "48(8), 3139–3151"
+        url: "https://doi.org/10.1109/TGRS.2010.2043953"
+      - year: 2008
+        authors: "Liang, D., **Xu, X.**, Tsang, L., Andreadis, K. M., & Josberger, E. G."
+        title: "The effects of layers in dry snow on its passive microwave emissions using dense media radiative transfer theory based on the quasicrystalline approximation (QCA/DMRT)"
+        venue: "IEEE TGRS"
+        detail: "46(11), 3663–3671"
+        url: "https://doi.org/10.1109/TGRS.2008.922143"
+
+  - title: "Under Review"
+    subtitle: "Submitted in 2026."
+    papers:
+      - year: 2026
+        title: "SMAP and the Land Carbon Cycle"
+        venue: "Remote Sensing of Environment"
+        status: "in review"
+      - year: 2026
+        title: "InSAR-SWE Bayesian Data Assimilation"
+        venue: "The Cryosphere"
+        status: "in review"
+      - year: 2026
+        title: "SMAP Mission Overview"
+        venue: "Proceedings of the IEEE"
+        status: "in review"
+
+  - title: "Data Products"
+    papers:
+      - year: 2018
+        authors: "**Xu, X.**, Dunbar, R. S., Derksen, C., Colliander, A., Kim, Y., & Kimball, J. S."
+        title: "SMAP L3 Radiometer Global and Northern Hemisphere Daily 36 km EASE-Grid Freeze/Thaw State, Version 2"
+        venue: "NASA NSIDC DAAC"
+        url: "https://doi.org/10.5067/YN94K53QM061"
+
+footnote: "A complete, continuously updated list is on [Google Scholar](https://scholar.google.com/) and [ORCID](https://orcid.org/0000-0003-4321-7931)."

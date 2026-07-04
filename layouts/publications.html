@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{ $pub := site.Data.publications }}
+<main class="page-main pa4" role="main">
+  <section class="page-content mw8 center publications-page">
+    {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns">{{ .Title }}</h1>{{ end }}
+
+    {{ with .Content }}<div class="pub-lede">{{ . }}</div>{{ end }}
+
+    <div class="pub-metrics">
+      {{ range $pub.metrics }}
+      <div class="pub-metric"><b>{{ .value }}</b><span>{{ .label }}</span></div>
+      {{ end }}
+      <div class="pub-profiles">
+        {{ range $pub.profiles }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end }}
+      </div>
+    </div>
+    {{ with $pub.note }}<p class="pub-note">{{ . }}</p>{{ end }}
+
+    {{ range $pub.sections }}
+    <h2 class="pub-section-title">{{ .title | markdownify }}</h2>
+    {{ with .subtitle }}<p class="pub-section-sub">{{ . }}</p>{{ end }}
+    <div class="pub-list">
+      {{ $prevYear := 0 }}
+      {{ range .papers }}
+      <div class="pub-entry">
+        <div class="pub-year{{ if eq .year $prevYear }} pub-year-repeat{{ end }}">{{ .year }}</div>
+        <div class="pub-cite">
+          {{- with .authors }}<span class="pub-authors">{{ . | markdownify }}</span> {{ end -}}
+          {{- if .url -}}
+          <a class="pub-title" href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>.
+          {{- else -}}
+          <span class="pub-title-plain">{{ .title }}</span>.
+          {{- end }}
+          <em>{{ .venue }}</em>{{ with .detail }}, {{ . }}{{ end }}.
+          {{ with .status }}<span class="pub-status">{{ . }}</span>{{ end }}
+        </div>
+      </div>
+      {{ $prevYear = .year }}
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ with $pub.footnote }}<p class="pub-footnote">{{ . | markdownify }}</p>{{ end }}
+  </section>
+</main>
+{{ end }}
