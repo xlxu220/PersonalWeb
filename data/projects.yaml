@@ -1,0 +1,46 @@
+# Funded research data — rendered by layouts/projects.html
+# SOURCE OF TRUTH: 04_Outputs/02_Proposals/TRACKER_Awarded.md,
+# TRACKER_Finished.md (TRACKER_Submitted.md entries are deliberately
+# NOT listed publicly — add only after selection).
+# Last synced: 2026-07-03
+#
+# Public-facing rules: no funding amounts, no task/account numbers,
+# no pending proposals. Year in the gutter is the start year.
+
+metrics:
+  - value: "4"
+    label: "funded proposals"
+  - value: "3"
+    label: "as PI"
+  - value: "3"
+    label: "currently active"
+
+note: "All awards competitively selected through NASA ROSES."
+
+sections:
+  - title: "As Principal Investigator"
+    entries:
+      - year: 2025
+        title: "ROSE-L Soil Moisture Retrieval Using the SMAP and NISAR Algorithm"
+        program: "NASA ROSES USPI"
+        period: "2025–2029"
+        status: "active"
+      - year: 2021
+        title: "Improve Soil Moisture Retrieval and Vegetation Optical Depth Using CYGNSS V3 Data"
+        program: "NASA ROSES A.27 CYGNSS"
+        period: "2021–2026"
+        status: "active"
+      - year: 2018
+        title: "Multilayer Forward Model Using SnowEx and TomoSAR Datasets at X/Ku-Band"
+        program: "NASA ROSES THP"
+        period: "2018–2020"
+        status: "completed"
+
+  - title: "As Co-Investigator"
+    entries:
+      - year: 2025
+        title: "Development of a Multi-Frequency InSAR Phase Data Assimilation Framework for Improved Seasonal SWE Characterization"
+        program: "NASA ROSES THP"
+        period: "2025–2028"
+        status: "active"
+        pi: "PI: Steven Margulis (UCLA)"

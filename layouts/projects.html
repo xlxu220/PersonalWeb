@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ $proj := site.Data.projects }}
+<main class="page-main pa4" role="main">
+  <section class="page-content publications-page">
+
+    {{ range $proj.sections }}
+    <h2 class="pub-section-title">{{ .title | markdownify }}</h2>
+    {{ with .subtitle }}<p class="pub-section-sub">{{ . }}</p>{{ end }}
+    <div class="pub-list">
+      {{ $prevYear := 0 }}
+      {{ range .entries }}
+      <div class="pub-entry">
+        <div class="pub-year{{ if eq .year $prevYear }} pub-year-repeat{{ end }}">{{ .year }}</div>
+        <div class="pub-cite">
+          <span class="proj-title">{{ .title }}</span>
+          <span class="proj-meta">{{ .program }} · {{ .period }}{{ with .pi }} · {{ . }}{{ end }}</span>
+          {{ with .status }}<span class="pub-status">{{ . }}</span>{{ end }}
+        </div>
+      </div>
+      {{ $prevYear = .year }}
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ with $proj.footnote }}<p class="pub-footnote">{{ . | markdownify }}</p>{{ end }}
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+  <div class="blog-info ph4 pt4 pb4">
+    {{ partial "shared/logo-motif.html" . }}
+    <h1 class="f2 mt0 lh-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="f5 lh-copy pub-lede">{{ . }}</div>{{ end }}
+    <div class="pub-side-metrics">
+      {{ range $proj.metrics }}
+      <div class="pub-metric"><b>{{ .value }}</b><span>{{ .label }}</span></div>
+      {{ end }}
+    </div>
+    {{ with $proj.note }}<p class="pub-note">{{ . }}</p>{{ end }}
+  </div>
+</aside>
+{{ end }}

@@ -371,8 +371,9 @@ $heading-stack: 'Open Sauce One', 'Inter', system-ui, sans-serif;
 // publication list cols 3–6. Palette: Ivy Green / Earth Blue.
 // ============================================================
 
-// grid placement (grid-container gets class "publications" from front matter)
-.publications {
+// grid placement (grid-container gets class "publications" / "projects"
+// from front matter; projects page reuses the same pub-* components)
+.publications, .projects {
   .page-sidebar { grid-column: 1 / 3; }
   .page-main    { grid-column: 3 / 7; }
   .page-sidebar .blog-info {
@@ -384,7 +385,7 @@ $heading-stack: 'Open Sauce One', 'Inter', system-ui, sans-serif;
 }
 
 // ---------- sidebar ----------
-.publications .page-sidebar {
+.publications .page-sidebar, .projects .page-sidebar {
   h1 { font-family: $heading-stack; }
 
   .pub-lede p {
@@ -508,6 +509,18 @@ $heading-stack: 'Open Sauce One', 'Inter', system-ui, sans-serif;
     }
   }
 
+  // projects page: proposal entries
+  .proj-title {
+    display: block;
+    font-weight: 500;
+  }
+  .proj-meta {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #5a6a72;
+    margin-top: 2px;
+  }
+
   .pub-footnote {
     margin-top: 56px;
     padding-top: 20px;
@@ -521,11 +534,12 @@ $heading-stack: 'Open Sauce One', 'Inter', system-ui, sans-serif;
 
 // ---------- mobile: stack like the other hub pages ----------
 @media screen and (max-width: 768px) {
-  .publications .page-main,
-  .publications .page-sidebar { grid-column: 1 / 7; }
-  .publications .page-main { order: 3; }
-  .publications .page-sidebar { order: 2; }
-  .publications .page-sidebar .blog-info {
+  .publications .page-main, .projects .page-main,
+  .publications .page-sidebar, .projects .page-sidebar { grid-column: 1 / 7; }
+  .publications .page-main, .projects .page-main { order: 3; }
+  .publications .page-sidebar, .projects .page-sidebar { order: 2; }
+  .publications .page-sidebar .blog-info,
+  .projects .page-sidebar .blog-info {
     border-right: 0;
     position: static;
   }
