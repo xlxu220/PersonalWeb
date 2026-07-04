@@ -1,20 +1,7 @@
 {{ define "main" }}
 {{ $pub := site.Data.publications }}
 <main class="page-main pa4" role="main">
-  <section class="page-content mw8 center publications-page">
-    {{ if .Params.show_title_as_headline }}<h1 class="f2 f1-m f-headline-l fw5-ns mv4 lh-solid tracked-tight-ns">{{ .Title }}</h1>{{ end }}
-
-    {{ with .Content }}<div class="pub-lede">{{ . }}</div>{{ end }}
-
-    <div class="pub-metrics">
-      {{ range $pub.metrics }}
-      <div class="pub-metric"><b>{{ .value }}</b><span>{{ .label }}</span></div>
-      {{ end }}
-      <div class="pub-profiles">
-        {{ range $pub.profiles }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end }}
-      </div>
-    </div>
-    {{ with $pub.note }}<p class="pub-note">{{ . }}</p>{{ end }}
+  <section class="page-content publications-page">
 
     {{ range $pub.sections }}
     <h2 class="pub-section-title">{{ .title | markdownify }}</h2>
@@ -43,4 +30,20 @@
     {{ with $pub.footnote }}<p class="pub-footnote">{{ . | markdownify }}</p>{{ end }}
   </section>
 </main>
+<aside class="page-sidebar" role="complementary">
+  <div class="blog-info ph4 pt4 pb4">
+    {{ partial "shared/logo-motif.html" . }}
+    <h1 class="f2 mt0 lh-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="f5 lh-copy pub-lede">{{ . }}</div>{{ end }}
+    <div class="pub-side-metrics">
+      {{ range $pub.metrics }}
+      <div class="pub-metric"><b>{{ .value }}</b><span>{{ .label }}</span></div>
+      {{ end }}
+    </div>
+    <div class="pub-profiles">
+      {{ range $pub.profiles }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end }}
+    </div>
+    {{ with $pub.note }}<p class="pub-note">{{ . }}</p>{{ end }}
+  </div>
+</aside>
 {{ end }}
