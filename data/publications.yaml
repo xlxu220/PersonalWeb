@@ -37,8 +37,10 @@ sections:
         venue: "IEEE JSTARS"
         url: "https://doi.org/10.1109/JSTARS.2026.3682116"
       - year: 2026
-        title: "L-band radar signatures of topography, soil moisture, and vegetation"
+        authors: "Huang, H., **Xu, X.**, & Yueh, S. H."
+        title: "Analysis of L-Band Radar Signatures of Surface Topography, Soil Moisture, and Vegetation Water Content"
         venue: "IEEE JSTARS"
+        detail: "19"
         url: "https://doi.org/10.1109/JSTARS.2026.3659111"
       - year: 2025
         authors: "Kumawat, D., Ebtehaj, A., **Xu, X.**, Colliander, A., & Kumar, V."
