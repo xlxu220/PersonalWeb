@@ -28,7 +28,7 @@
       <div class="mt3">
         {{ with .heading }}<p class="f7 ttu tracked mb1" style="color:#2D454D;">{{ . }}</p>{{ end }}
         <ul class="list pl0 mv0">
-          {{ range .items }}<li class="mb2"><a class="link" href="{{ .url | relURL }}">{{ .name }} &rarr;</a></li>{{ end }}
+          {{ range .items }}<li class="mb2"><a class="link" href="{{ .url | absURL }}">{{ .name }} &rarr;</a></li>{{ end }}
         </ul>
       </div>
       {{ end }}

@@ -2,12 +2,17 @@
 # SOURCE OF TRUTH: 04_Outputs/02_Proposals/TRACKER_Awarded.md,
 # TRACKER_Finished.md (TRACKER_Submitted.md entries are deliberately
 # NOT listed publicly — add only after selection).
-# Last synced: 2026-07-03 (full history sync)
+# Last synced: 2026-07-04 (added anchor slugs for deep-linking)
 #
 # Public-facing rules: no funding amounts, no task/account numbers,
 # no pending proposals. Year in the gutter is the start year (submit
 # year when no start date is on record). "Collaborator" = unfunded
 # team member per the proposal cover page — kept distinct from Co-I.
+#
+# `slug` gives each entry a stable anchor (/project/#slug) so other
+# pages (e.g. mission sidebars) can deep-link to a specific award
+# instead of the generic list. Keep slugs stable once published —
+# other pages depend on them.
 
 metrics:
   - value: "11"
@@ -27,16 +32,19 @@ sections:
   - title: "As Principal Investigator"
     entries:
       - year: 2025
+        slug: "smap-nisar-algorithm"
         title: "ROSE-L Soil Moisture Retrieval Using the SMAP and NISAR Algorithm"
         program: "NASA ROSES USPI"
         period: "2025–2029"
         status: "active"
       - year: 2021
+        slug: "cygnss-v3-sm-vod"
         title: "Improve Soil Moisture Retrieval and Vegetation Optical Depth Using CYGNSS V3 Data"
         program: "NASA ROSES A.27 CYGNSS"
         period: "2021–2026"
         status: "active"
       - year: 2018
+        slug: "multilayer-forward-model-snowex"
         title: "Multilayer Forward Model Using SnowEx and TomoSAR Datasets at X/Ku-Band"
         program: "NASA ROSES THP"
         period: "2018–2020"
@@ -45,36 +53,42 @@ sections:
   - title: "As Co-Investigator"
     entries:
       - year: 2025
+        slug: "insar-swe-assimilation"
         title: "Development of a Multi-Frequency InSAR Phase Data Assimilation Framework for Improved Seasonal SWE Characterization"
         program: "NASA ROSES THP"
         period: "2025–2028"
         status: "active"
         pi: "PI: Steven Margulis (UCLA)"
       - year: 2019
+        slug: "pband-swe-theoretical"
         title: "Theoretical Basis for P-Band Signals of Opportunity for Remote Sensing of Snow Water Equivalent"
         program: "NASA ROSES RST"
         period: "2019–2022"
         status: "completed"
         pi: "PI: Steven Margulis (UCLA)"
       - year: 2019
+        slug: "soop-sar-land-surfaces"
         title: "Signals of Opportunity Synthetic Aperture Radar for High Resolution Remote Sensing of Land Surfaces"
         program: "NASA ROSES IIP"
         period: "18 months"
         status: "completed"
         pi: "PI: Simon Yueh (JPL)"
       - year: 2018
+        slug: "cygnss-sm-algorithm-validation"
         title: "CYGNSS Soil Moisture Algorithm and Validation"
         program: "NASA ROSES CYGNSS"
         period: "2018–2021"
         status: "completed"
         pi: "PI: Simon Yueh (JPL)"
       - year: 2018
+        slug: "pband-soop-rootzone"
         title: "P-Band Signals of Opportunity for Remote Sensing of Root Zone Soil Moisture and Snow"
         program: "NASA ROSES THP"
         period: "2018–2020"
         status: "completed"
         pi: "PI: Simon Yueh (JPL)"
       - year: 2014
+        slug: "radar-scattering-terrestrial-snow"
         title: "Radar Scattering from Terrestrial Snow at X Band and Ku Band: Forward Physical Models, Validation with SnowSAR Data and Retrieval Algorithm"
         program: "NASA ROSES THP"
         period: "2014–2016"
@@ -85,11 +99,13 @@ sections:
     subtitle: "Unfunded team member on selected proposals."
     entries:
       - year: 2016
+        slug: "swe-retrieval-accuracy-airborne"
         title: "Characterizing Accuracy of an Advanced Snow Water Equivalent Retrieval Algorithm Applied to Airborne Microwave Remote Sensing Measurements"
         program: "NASA ROSES THP"
         status: "completed"
         pi: "PI: Michael Durand"
       - year: 2016
+        slug: "satellite-sm-air-quality-modeling"
         title: "Integrating Satellite Soil Moisture into Weather, Emission, and Air Quality Modeling"
         program: "NASA ROSES SUSMAP"
         status: "completed"

@@ -4,20 +4,16 @@ layout: topic-page
 tag: "L-band · freeze–thaw origins"
 description: "Where my freeze–thaw work began."
 related:
-  - heading: "Projects"
-    items:
-      - name: "Freeze–thaw"
-        url: "/project/freeze-thaw-vod/"
   - heading: "Papers"
     items:
-      - name: "Freeze–thaw publications"
-        url: "/publication/"
+      - name: "Freeze/thaw detection & validation — first author"
+        url: "https://doi.org/10.1109/JSTARS.2016.2519347"
   - heading: "Talks"
     items:
       - name: "All talks"
         url: "/talk/"
 ---
 
-**Aquarius** is where my freeze–thaw work began: L-band detection of whether the land surface is **frozen or thawed** — the signal that marks the onset of spring and the timing of frost.
+Aquarius is where my **freeze–thaw** work began. As first author, I developed and validated the first L-band detection of landscape freeze/thaw state from Aquarius' backscatter data — showing that a scatterometer could reliably flag the frozen/thawed switch across the boreal and Arctic land surface, the signal that marks spring onset and frost timing.
 
-That early-career thread grew into the operational **SMAP** freeze–thaw science product — a clear case of a research idea maturing into something missions deliver routinely.
+That detection method became the basis for the operational **SMAP freeze/thaw** science product I now lead — a direct line from an early-career research result to a mission deliverable.

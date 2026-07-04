@@ -4,14 +4,18 @@ layout: topic-page
 tag: "DMRT · NMM3D · forward models"
 description: "First-principles models of how microwaves scatter inside snow and off rough, vegetated terrain."
 related:
-  - heading: "Projects"
-    items:
-      - name: "Microwave scattering models"
-        url: "/project/microwave-scattering-models/"
   - heading: "Papers"
     items:
-      - name: "Modeling publications"
-        url: "/publication/"
+      - name: "Bicontinuous/DMRT co/cross-pol modeling — first author"
+        url: "https://doi.org/10.1109/JSTARS.2012.2190719"
+      - name: "Bicontinuous random-microstructure scattering — co-author"
+        url: "https://doi.org/10.1109/TGRS.2010.2043953"
+      - name: "EM computation in dense media (Proc. IEEE) — co-author"
+        url: "https://doi.org/10.1109/JPROC.2012.2214011"
+  - heading: "Funding"
+    items:
+      - name: "Co-I — Forward scattering models, SnowSAR validation (NASA ROSES THP, 2014–2016)"
+        url: "/project/#radar-scattering-terrestrial-snow"
   - heading: "Talks"
     items:
       - name: "All talks"

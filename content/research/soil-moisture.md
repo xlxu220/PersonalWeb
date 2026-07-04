@@ -8,16 +8,22 @@ description: "L-band soil-moisture retrieval, from SMAP to the NISAR era and ref
 # talk:
 #   url: "/talks/soil-moisture/index.html"
 related:
-  - heading: "Projects"
-    items:
-      - name: "SMAP + NISAR soil moisture"
-        url: "/project/smap-nisar-soil-moisture/"
-      - name: "GNSS-R for land"
-        url: "/project/gnss-r-land/"
   - heading: "Papers"
     items:
-      - name: "Soil-moisture publications"
-        url: "/publication/"
+      - name: "SMAP–NISAR SM retrieval from SAR — first author"
+        url: "https://doi.org/10.1109/JSTARS.2026.3682116"
+      - name: "L-band radar signatures of SM & VWC — co-author"
+        url: "https://doi.org/10.1109/JSTARS.2026.3659111"
+      - name: "CYGNSS reflectometry retrieval model — co-author"
+        url: "https://doi.org/10.1109/TGRS.2020.3035989"
+      - name: "Merged CYGNSS soil-moisture product — co-author"
+        url: "https://doi.org/10.1109/TGRS.2025.3597532"
+  - heading: "Funding"
+    items:
+      - name: "PI — SMAP–NISAR algorithm (NASA ROSES USPI, 2025–2029)"
+        url: "/project/#smap-nisar-algorithm"
+      - name: "PI — CYGNSS V3 soil moisture + VOD (NASA ROSES A.27, 2021–2026)"
+        url: "/project/#cygnss-v3-sm-vod"
   - heading: "Talks"
     items:
       - name: "All talks"

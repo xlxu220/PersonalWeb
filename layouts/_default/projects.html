@@ -9,7 +9,7 @@
     <div class="pub-list">
       {{ $prevYear := 0 }}
       {{ range .entries }}
-      <div class="pub-entry">
+      <div class="pub-entry"{{ with .slug }} id="{{ . }}"{{ end }}>
         <div class="pub-year{{ if eq .year $prevYear }} pub-year-repeat{{ end }}">{{ .year }}</div>
         <div class="pub-cite">
           <span class="proj-title">{{ .title }}</span>
