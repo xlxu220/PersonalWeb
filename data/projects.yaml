@@ -2,13 +2,15 @@
 # SOURCE OF TRUTH: 04_Outputs/02_Proposals/TRACKER_Awarded.md,
 # TRACKER_Finished.md (TRACKER_Submitted.md entries are deliberately
 # NOT listed publicly — add only after selection).
-# Last synced: 2026-07-03
+# Last synced: 2026-07-03 (full history sync)
 #
 # Public-facing rules: no funding amounts, no task/account numbers,
-# no pending proposals. Year in the gutter is the start year.
+# no pending proposals. Year in the gutter is the start year (submit
+# year when no start date is on record). "Collaborator" = unfunded
+# team member per the proposal cover page — kept distinct from Co-I.
 
 metrics:
-  - value: "4"
+  - value: "11"
     label: "funded proposals"
   - value: "3"
     label: "as PI"
@@ -44,3 +46,47 @@ sections:
         period: "2025–2028"
         status: "active"
         pi: "PI: Steven Margulis (UCLA)"
+      - year: 2019
+        title: "Theoretical Basis for P-Band Signals of Opportunity for Remote Sensing of Snow Water Equivalent"
+        program: "NASA ROSES RST"
+        period: "2019–2022"
+        status: "completed"
+        pi: "PI: Steven Margulis (UCLA)"
+      - year: 2019
+        title: "Signals of Opportunity Synthetic Aperture Radar for High Resolution Remote Sensing of Land Surfaces"
+        program: "NASA ROSES IIP"
+        period: "18 months"
+        status: "completed"
+        pi: "PI: Simon Yueh (JPL)"
+      - year: 2018
+        title: "CYGNSS Soil Moisture Algorithm and Validation"
+        program: "NASA ROSES CYGNSS"
+        period: "2018–2021"
+        status: "completed"
+        pi: "PI: Simon Yueh (JPL)"
+      - year: 2018
+        title: "P-Band Signals of Opportunity for Remote Sensing of Root Zone Soil Moisture and Snow"
+        program: "NASA ROSES THP"
+        period: "2018–2020"
+        status: "completed"
+        pi: "PI: Simon Yueh (JPL)"
+      - year: 2014
+        title: "Radar Scattering from Terrestrial Snow at X Band and Ku Band: Forward Physical Models, Validation with SnowSAR Data and Retrieval Algorithm"
+        program: "NASA ROSES THP"
+        period: "2014–2016"
+        status: "completed"
+        pi: "PI: Leung Tsang (Univ. of Washington)"
+
+  - title: "As Collaborator"
+    subtitle: "Unfunded team member on selected proposals."
+    entries:
+      - year: 2016
+        title: "Characterizing Accuracy of an Advanced Snow Water Equivalent Retrieval Algorithm Applied to Airborne Microwave Remote Sensing Measurements"
+        program: "NASA ROSES THP"
+        status: "completed"
+        pi: "PI: Michael Durand"
+      - year: 2016
+        title: "Integrating Satellite Soil Moisture into Weather, Emission, and Air Quality Modeling"
+        program: "NASA ROSES SUSMAP"
+        status: "completed"
+        pi: "PI: Min Huang"

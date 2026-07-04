@@ -13,7 +13,7 @@
         <div class="pub-year{{ if eq .year $prevYear }} pub-year-repeat{{ end }}">{{ .year }}</div>
         <div class="pub-cite">
           <span class="proj-title">{{ .title }}</span>
-          <span class="proj-meta">{{ .program }} · {{ .period }}{{ with .pi }} · {{ . }}{{ end }}</span>
+          <span class="proj-meta">{{ .program }}{{ with .period }} · {{ . }}{{ end }}{{ with .pi }} · {{ . }}{{ end }}</span>
           {{ with .status }}<span class="pub-status">{{ . }}</span>{{ end }}
         </div>
       </div>
