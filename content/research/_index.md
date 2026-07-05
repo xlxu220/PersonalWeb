@@ -5,7 +5,7 @@ layout: topic-hub
 headline: "From wave physics to data products — and back"
 intro: "Four threads, one backbone. Pick where to dig in."
 hub:
-  motif: true
+  mark: "research"
   heading: "The Science"
   badge: "2020 URSI Santimay Basu Prize"
 doors:

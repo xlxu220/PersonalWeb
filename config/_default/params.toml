@@ -2,7 +2,7 @@ orgName = "NASA Jet Propulsion Laboratory"
 orgLocal = "Pasadena, CA"
 description = "Xiaolan Xu — Research Scientist at NASA JPL. Microwave remote sensing of the land surface: soil moisture, snow, and freeze-thaw."
 favicon = "/img/favicon.ico"
-logo = ""  # empty = use the site title text as the logo
+logo = "/img/favicon.svg"  # header now shows site title text + this mark to its right (see layouts/partials/header.html override); same mark used site-wide (favicon, sidebar motif)
 mainSections = ["blog", "project", "talk"]
 navallcaps = true
 socialInHeader = false

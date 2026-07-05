@@ -5,7 +5,7 @@ layout: topic-hub
 headline: "The missions my science flies on"
 intro: "Five missions, one backbone. Pick where to dig in."
 hub:
-  motif: true
+  mark: "missions"
   heading: "Mission Work"
 doors:
   - name: "SMAP"

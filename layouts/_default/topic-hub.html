@@ -26,8 +26,8 @@
 <aside class="page-sidebar" role="complementary">
   <div class="blog-info ph4 pt4 pb4">
     {{ with .Params.hub }}
-      {{ if .motif }}
-      {{ partial "shared/logo-motif.html" . }}
+      {{ with .mark }}
+      {{ partial "shared/section-mark.html" . }}
       {{ end }}
       {{ with .heading }}<h1 class="f2 mt0 lh-title">{{ . | markdownify }}</h1>{{ end }}
     {{ end }}

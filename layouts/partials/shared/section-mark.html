@@ -1,0 +1,112 @@
+{{/* Section identity marks — same three-arc-and-crescent grammar as static/img/favicon.svg
+     ("signal over surface" — the personal mark, which now lives only in the site header
+     next to the name). Interior content pages get a variant instead of repeating the
+     personal mark: same base arcs + crescent, one structural/color accent per section.
+
+     Canvas is 56x56 with the base mark inset by (4,4) — the 4pt margin all around is
+     deliberate breathing room so a variant (e.g. Missions' orbit arcs) can add something
+     OUTSIDE the mark's own lines without ever crossing them.
+
+     Call with a variant string:
+       {{ partial "shared/section-mark.html" "research" }}
+       {{ partial "shared/section-mark.html" "missions" }}
+       {{ partial "shared/section-mark.html" "publications" }}
+       {{ partial "shared/section-mark.html" "projects" }}
+
+     Keep the three base arc paths + crescent in sync with static/img/favicon.svg
+     (adjusted by the +4,+4 inset here) if the personal mark's geometry ever changes. */}}
+{{ $variant := . }}
+<svg width="70" height="70" viewBox="0 0 56 56" class="db mb3" role="img" aria-label="{{ $variant | title }} mark">
+  <g transform="translate(4,4)">
+    <path d="M14 7 A10 10 0 0 0 34 7" fill="none" stroke="#CD212A" stroke-width="2.7" stroke-linecap="round"/>
+    <path d="M9 7 A15 15 0 0 0 39 7" fill="none" stroke="#05161E" stroke-width="2.7" stroke-linecap="round"/>
+    <path d="M4 7 A20 20 0 0 0 44 7" fill="none" stroke="#0D8758" stroke-width="2.7" stroke-linecap="round" opacity=".5"/>
+
+    {{ if eq $variant "research" }}
+    {{/* Research: dot recolored to the same gold already used as the "current focus"
+         marker in the topics/wave-physics.svg + topics/soil-moisture.svg icons — ties
+         this mark back to the research doors it sits above. No added glyph; Research
+         is the root of the site, so it stays closest to the pure base grammar. Crescent
+         stays the default green — this is the ground, unmodified. */}}
+    <circle cx="24" cy="7" r="3.6" fill="#FCEB9D" stroke="#05161E" stroke-width="1.1"/>
+    <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
+
+    {{ else if eq $variant "missions" }}
+    {{/* Missions: dot stays default. Crescent recolored slate (the ground as seen from
+         orbit). The orbit itself lives entirely outside the mark's own lines, in the
+         margin: two mirrored dashed arcs hugging the left and right edges, each with
+         a small satellite — symmetric, nothing crosses the arcs or crescent. */}}
+    <circle cx="24" cy="7" r="3.4" fill="#0F7EB1" stroke="#05161E" stroke-width="1.1"/>
+    <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#4C5666" stroke-width="2.9" stroke-linecap="round"/>
+
+    {{ else if eq $variant "publications" }}
+    {{/* Publications: dot recolored to a warm ink/sepia tone — the printed record.
+         Crescent unchanged. The accent lives in the margin (see below): stacked
+         text-line ticks on both sides, like a miniature page. */}}
+    <circle cx="24" cy="7" r="3.4" fill="#7A5630" stroke="#05161E" stroke-width="1.1"/>
+    <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
+
+    {{ else if eq $variant "projects" }}
+    {{/* Projects/Proposals: dot recolored green (funded, go). Crescent unchanged. The
+         launch-trajectory idea moves to the margin (see below): two mirrored ascending
+         ticks with arrowheads, symmetric, instead of a line crossing through the dot. */}}
+    <circle cx="24" cy="7" r="3.4" fill="#0D8758" stroke="#05161E" stroke-width="1.1"/>
+    <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
+
+    {{ else }}
+    <circle cx="24" cy="7" r="3.4" fill="#0F7EB1" stroke="#05161E" stroke-width="1.1"/>
+    <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
+    {{ end }}
+  </g>
+
+  {{ if eq $variant "missions" }}
+  <path d="M46 12 A20 20 0 0 1 46 44" fill="none" stroke="#4C5666" stroke-width="1" stroke-dasharray="2.5 2.5" opacity="0.55"/>
+  <g transform="translate(54,28)">
+    <rect x="-1" y="-2" width="2" height="4" fill="#4C5666"/>
+    <rect x="-0.6" y="-6" width="1.2" height="3" fill="#4C5666"/>
+    <rect x="-0.6" y="3" width="1.2" height="3" fill="#4C5666"/>
+    <line x1="-1" y1="0" x2="-3" y2="0" stroke="#4C5666" stroke-width="0.6"/>
+  </g>
+  <path d="M10 12 A20 20 0 0 0 10 44" fill="none" stroke="#4C5666" stroke-width="1" stroke-dasharray="2.5 2.5" opacity="0.55"/>
+  <g transform="translate(2,28)">
+    <rect x="-1" y="-2" width="2" height="4" fill="#4C5666"/>
+    <rect x="-0.6" y="-6" width="1.2" height="3" fill="#4C5666"/>
+    <rect x="-0.6" y="3" width="1.2" height="3" fill="#4C5666"/>
+    <line x1="1" y1="0" x2="3" y2="0" stroke="#4C5666" stroke-width="0.6"/>
+  </g>
+  {{ end }}
+
+  {{ if eq $variant "research" }}
+  {{/* Small measurement-tick marks, symmetric left/right, in the margin outside the
+       mark. Half the length of the original full-height bracket, centered vertically
+       on the mark's midline (y=28) rather than stretching to touch the arc and
+       crescent — a quiet caliper mark, not a frame around the whole thing. */}}
+  <line x1="5" y1="19.5" x2="5" y2="36.5" stroke="#05161E" stroke-width="1" opacity="0.6"/>
+  <line x1="3.5" y1="19.5" x2="6.5" y2="19.5" stroke="#05161E" stroke-width="1" opacity="0.6"/>
+  <line x1="3.5" y1="36.5" x2="6.5" y2="36.5" stroke="#05161E" stroke-width="1" opacity="0.6"/>
+  <line x1="51" y1="19.5" x2="51" y2="36.5" stroke="#05161E" stroke-width="1" opacity="0.6"/>
+  <line x1="49.5" y1="19.5" x2="52.5" y2="19.5" stroke="#05161E" stroke-width="1" opacity="0.6"/>
+  <line x1="49.5" y1="36.5" x2="52.5" y2="36.5" stroke="#05161E" stroke-width="1" opacity="0.6"/>
+  {{ end }}
+
+  {{ if eq $variant "publications" }}
+  {{/* Stacked text-line ticks, symmetric left/right, in the margin — a miniature page,
+       same warm ink tone as the recolored dot. Third line shorter, like a paragraph's
+       last line, so it reads as text rather than a decorative bracket. */}}
+  <line x1="3" y1="22" x2="9" y2="22" stroke="#7A5630" stroke-width="1" opacity="0.7"/>
+  <line x1="3" y1="26" x2="9" y2="26" stroke="#7A5630" stroke-width="1" opacity="0.7"/>
+  <line x1="3" y1="30" x2="7" y2="30" stroke="#7A5630" stroke-width="1" opacity="0.7"/>
+  <line x1="53" y1="22" x2="47" y2="22" stroke="#7A5630" stroke-width="1" opacity="0.7"/>
+  <line x1="53" y1="26" x2="47" y2="26" stroke="#7A5630" stroke-width="1" opacity="0.7"/>
+  <line x1="53" y1="30" x2="49" y2="30" stroke="#7A5630" stroke-width="1" opacity="0.7"/>
+  {{ end }}
+
+  {{ if eq $variant "projects" }}
+  {{/* Two mirrored small flags, symmetric left/right, in the margin — funded,
+       claimed ground, in the same green as the recolored dot. */}}
+  <line x1="5" y1="20" x2="5" y2="36" stroke="#0D8758" stroke-width="1" opacity="0.8"/>
+  <polygon points="5,20 9,23 5,26" fill="#0D8758"/>
+  <line x1="51" y1="20" x2="51" y2="36" stroke="#0D8758" stroke-width="1" opacity="0.8"/>
+  <polygon points="51,20 47,23 51,26" fill="#0D8758"/>
+  {{ end }}
+</svg>
