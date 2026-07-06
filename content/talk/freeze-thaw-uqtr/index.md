@@ -14,4 +14,15 @@ links:
   url: /files/talks/2026-06-15_Freeze-Thaw-UQTR_XU.pdf
 ---
 
-Invited seminar slides from UQTR. PDF available above.
+## Copyright & Attribution
+
+© 2026. California Institute of Technology. Government sponsorship acknowledged.
+
+**Author:** Xiaolan Xu  
+**Affiliation:** Jet Propulsion Laboratory, California Institute of Technology
+
+**Funding:** The research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with the National Aeronautics and Space Administration (80NM0018D0004).
+
+---
+
+Invited seminar on continuous (non-binary) freeze-thaw state retrieval from L-band microwave missions. Covers the scientific motivation, algorithm development, and validation work for transitioning from traditional binary freeze-thaw classification to continuous state estimation.
