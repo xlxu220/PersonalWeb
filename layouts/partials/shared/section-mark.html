@@ -25,32 +25,56 @@
     {{ if eq $variant "research" }}
     {{/* Research: dot recolored to the same gold already used as the "current focus"
          marker in the topics/wave-physics.svg + topics/soil-moisture.svg icons — ties
-         this mark back to the research doors it sits above. No added glyph; Research
-         is the root of the site, so it stays closest to the pure base grammar. Crescent
-         stays the default green — this is the ground, unmodified. */}}
+         this mark back to the research doors it sits above. Crescent stays the
+         default green — this is the ground, unmodified. Accent lives in the corner
+         (see below): a sine wave, the signal itself. */}}
     <circle cx="24" cy="7" r="3.6" fill="#FCEB9D" stroke="#05161E" stroke-width="1.1"/>
     <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
 
     {{ else if eq $variant "missions" }}
-    {{/* Missions: dot stays default. Crescent recolored slate (the ground as seen from
-         orbit). The orbit itself lives entirely outside the mark's own lines, in the
-         margin: two mirrored dashed arcs hugging the left and right edges, each with
-         a small satellite — symmetric, nothing crosses the arcs or crescent. */}}
+    {{/* Missions: dot stays default blue. Crescent normalized to the default green
+         (was slate; now matches every other variant so only the dot + corner icon
+         carry the color). Accent lives in the corner (see below): one satellite on
+         a dashed orbital arc. */}}
     <circle cx="24" cy="7" r="3.4" fill="#0F7EB1" stroke="#05161E" stroke-width="1.1"/>
-    <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#4C5666" stroke-width="2.9" stroke-linecap="round"/>
+    <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
 
     {{ else if eq $variant "publications" }}
     {{/* Publications: dot recolored to a warm ink/sepia tone — the printed record.
-         Crescent unchanged. The accent lives in the margin (see below): stacked
-         text-line ticks on both sides, like a miniature page. */}}
+         Crescent unchanged. Accent lives in the corner (see below): a small open
+         book. */}}
     <circle cx="24" cy="7" r="3.4" fill="#7A5630" stroke="#05161E" stroke-width="1.1"/>
     <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
 
     {{ else if eq $variant "projects" }}
-    {{/* Projects/Proposals: dot recolored green (funded, go). Crescent unchanged. The
-         launch-trajectory idea moves to the margin (see below): two mirrored ascending
-         ticks with arrowheads, symmetric, instead of a line crossing through the dot. */}}
+    {{/* Projects/Proposals: dot recolored green (funded, go). Crescent unchanged.
+         Accent lives in the corner (see below): a checkmark badge — funded,
+         approved, greenlit. */}}
     <circle cx="24" cy="7" r="3.4" fill="#0D8758" stroke="#05161E" stroke-width="1.1"/>
+    <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
+
+    {{ else if eq $variant "closing-the-loop" }}
+    {{/* Closing the Loop: dot recolored JPL red — the same red already used for
+         "Closing The Loop" in the Research hub door name, not a new color.
+         Crescent unchanged. Accent lives in the corner (see below): a small
+         infinity mark — continuous feedback, no start or end. */}}
+    <circle cx="24" cy="7" r="3.6" fill="#CD212A" stroke="#05161E" stroke-width="1.1"/>
+    <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
+
+    {{ else if eq $variant "collaborate" }}
+    {{/* Collaborate: dot recolored coral — unused elsewhere, warm/human. Crescent
+         unchanged. Accent lives in the corner (see below): two overlapping speech
+         bubbles rather than Talks' single bubble, to read as dialogue between two
+         parties rather than one-way presentation. */}}
+    <circle cx="24" cy="7" r="3.4" fill="#E89B8F" stroke="#05161E" stroke-width="1.1"/>
+    <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
+
+    {{ else if eq $variant "cv" }}
+    {{/* CV: dot recolored the lavender already used for the "About/person" door on
+         the homepage — this is the identity-record page. Crescent unchanged. Accent
+         lives in the corner (see below), same position as Talks/Notes: a small
+         folded-corner document page. */}}
+    <circle cx="24" cy="7" r="3.4" fill="#9B8FB8" stroke="#05161E" stroke-width="1.1"/>
     <path d="M5 41 C13 28.3 35 28.3 43 41" fill="none" stroke="#0D8758" stroke-width="2.9" stroke-linecap="round"/>
 
     {{ else }}
@@ -60,53 +84,87 @@
   </g>
 
   {{ if eq $variant "missions" }}
-  <path d="M46 12 A20 20 0 0 1 46 44" fill="none" stroke="#4C5666" stroke-width="1" stroke-dasharray="2.5 2.5" opacity="0.55"/>
-  <g transform="translate(54,28)">
-    <rect x="-1" y="-2" width="2" height="4" fill="#4C5666"/>
-    <rect x="-0.6" y="-6" width="1.2" height="3" fill="#4C5666"/>
-    <rect x="-0.6" y="3" width="1.2" height="3" fill="#4C5666"/>
-    <line x1="-1" y1="0" x2="-3" y2="0" stroke="#4C5666" stroke-width="0.6"/>
-  </g>
-  <path d="M10 12 A20 20 0 0 0 10 44" fill="none" stroke="#4C5666" stroke-width="1" stroke-dasharray="2.5 2.5" opacity="0.55"/>
-  <g transform="translate(2,28)">
-    <rect x="-1" y="-2" width="2" height="4" fill="#4C5666"/>
-    <rect x="-0.6" y="-6" width="1.2" height="3" fill="#4C5666"/>
-    <rect x="-0.6" y="3" width="1.2" height="3" fill="#4C5666"/>
-    <line x1="1" y1="0" x2="3" y2="0" stroke="#4C5666" stroke-width="0.6"/>
+  {{/* Missions: one satellite riding a dashed orbital arc, top-right — same blue as
+       the dot. Replaces the old two-sided orbit+satellite pair now that Research/
+       Missions/Publications/Projects all move to a single corner icon, matching
+       Talks/Notes/CV/Collaborate/Closing-the-Loop. */}}
+  <path d="M43 9 A6.5 6.5 0 0 1 53.5 3.5" fill="none" stroke="#0F7EB1" stroke-width="1" stroke-dasharray="2 2" opacity="0.8"/>
+  <g transform="translate(53.5,3.5)">
+    <rect x="-1" y="-1.6" width="2" height="3.2" fill="#0F7EB1"/>
+    <rect x="-0.5" y="-4" width="1" height="2" fill="#0F7EB1"/>
+    <rect x="-0.5" y="2" width="1" height="2" fill="#0F7EB1"/>
   </g>
   {{ end }}
 
   {{ if eq $variant "research" }}
-  {{/* Small measurement-tick marks, symmetric left/right, in the margin outside the
-       mark. Half the length of the original full-height bracket, centered vertically
-       on the mark's midline (y=28) rather than stretching to touch the arc and
-       crescent — a quiet caliper mark, not a frame around the whole thing. */}}
-  <line x1="5" y1="19.5" x2="5" y2="36.5" stroke="#05161E" stroke-width="1" opacity="0.6"/>
-  <line x1="3.5" y1="19.5" x2="6.5" y2="19.5" stroke="#05161E" stroke-width="1" opacity="0.6"/>
-  <line x1="3.5" y1="36.5" x2="6.5" y2="36.5" stroke="#05161E" stroke-width="1" opacity="0.6"/>
-  <line x1="51" y1="19.5" x2="51" y2="36.5" stroke="#05161E" stroke-width="1" opacity="0.6"/>
-  <line x1="49.5" y1="19.5" x2="52.5" y2="19.5" stroke="#05161E" stroke-width="1" opacity="0.6"/>
-  <line x1="49.5" y1="36.5" x2="52.5" y2="36.5" stroke="#05161E" stroke-width="1" opacity="0.6"/>
+  {{/* Research: a small sine-wave squiggle, top-right — the signal itself. Drawn in
+       ink rather than the dot's pale Mylar Gold, which reads too washed-out as a
+       thin stroke line (same reasoning as the base mark's own outline). Replaces
+       the old two-sided caliper ticks now that Research/Missions/Publications/
+       Projects all move to a single corner icon, matching Talks/Notes/CV/
+       Collaborate/Closing-the-Loop. */}}
+  <path d="M42.5 5 Q44.5 1.5 46.5 5 T50.5 5 T54.5 5" fill="none" stroke="#05161E" stroke-width="1.1" stroke-linecap="round" opacity="0.75"/>
   {{ end }}
 
   {{ if eq $variant "publications" }}
-  {{/* Stacked text-line ticks, symmetric left/right, in the margin — a miniature page,
-       same warm ink tone as the recolored dot. Third line shorter, like a paragraph's
-       last line, so it reads as text rather than a decorative bracket. */}}
-  <line x1="3" y1="22" x2="9" y2="22" stroke="#7A5630" stroke-width="1" opacity="0.7"/>
-  <line x1="3" y1="26" x2="9" y2="26" stroke="#7A5630" stroke-width="1" opacity="0.7"/>
-  <line x1="3" y1="30" x2="7" y2="30" stroke="#7A5630" stroke-width="1" opacity="0.7"/>
-  <line x1="53" y1="22" x2="47" y2="22" stroke="#7A5630" stroke-width="1" opacity="0.7"/>
-  <line x1="53" y1="26" x2="47" y2="26" stroke="#7A5630" stroke-width="1" opacity="0.7"/>
-  <line x1="53" y1="30" x2="49" y2="30" stroke="#7A5630" stroke-width="1" opacity="0.7"/>
+  {{/* Publications: a small open book, top-right — same warm ink/sepia as the
+       recolored dot. Replaces the old two-sided page-line ticks now that Research/
+       Missions/Publications/Projects all move to a single corner icon, matching
+       Talks/Notes/CV/Collaborate/Closing-the-Loop. */}}
+  <path d="M48.5 1.8 C46.5 1.3 44.7 1.8 44.7 2.8 L44.7 8.8 C44.7 7.8 46.5 7.3 48.5 7.8 Z" fill="none" stroke="#7A5630" stroke-width="1"/>
+  <path d="M48.5 1.8 C50.5 1.3 52.3 1.8 52.3 2.8 L52.3 8.8 C52.3 7.8 50.5 7.3 48.5 7.8 Z" fill="none" stroke="#7A5630" stroke-width="1"/>
   {{ end }}
 
   {{ if eq $variant "projects" }}
-  {{/* Two mirrored small flags, symmetric left/right, in the margin — funded,
-       claimed ground, in the same green as the recolored dot. */}}
-  <line x1="5" y1="20" x2="5" y2="36" stroke="#0D8758" stroke-width="1" opacity="0.8"/>
-  <polygon points="5,20 9,23 5,26" fill="#0D8758"/>
-  <line x1="51" y1="20" x2="51" y2="36" stroke="#0D8758" stroke-width="1" opacity="0.8"/>
-  <polygon points="51,20 47,23 51,26" fill="#0D8758"/>
+  {{/* Projects: a checkmark badge, top-right — same green as the recolored dot.
+       Replaces the old two mirrored flags now that Research/Missions/Publications/
+       Projects all move to a single corner icon, matching Talks/Notes/CV/
+       Collaborate/Closing-the-Loop. */}}
+  <circle cx="49" cy="5" r="4.2" fill="none" stroke="#0D8758" stroke-width="1"/>
+  <path d="M47 5 L48.5 6.5 L51.3 3.5" fill="none" stroke="#0D8758" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+  {{ end }}
+
+  {{ if eq $variant "talks" }}
+  {{/* Talks: a single corner badge, top-right — outlined speech-bubble (oval,
+       pointed tail, two dialogue lines inside), same blue as the mark's own dot.
+       Pushed into the very corner (hugging x=56/y=0) for distance from the arcs. */}}
+  <ellipse cx="49" cy="4" rx="6" ry="4" fill="none" stroke="#0F7EB1" stroke-width="1"/>
+  <path d="M45 7.3 L43 9 L47.5 7.8 Z" fill="#0F7EB1"/>
+  <line x1="45" y1="2.8" x2="53" y2="2.8" stroke="#0F7EB1" stroke-width="1"/>
+  <line x1="45" y1="5.2" x2="51" y2="5.2" stroke="#0F7EB1" stroke-width="1"/>
+  {{ end }}
+
+  {{ if eq $variant "closing-the-loop" }}
+  {{/* Closing the Loop: a small infinity mark, top-right — same JPL red as the
+       recolored dot. Two arcs sharing a crossing point, drawn thin to stay quiet
+       next to the base mark's own lines. */}}
+  <path d="M42.5 5 A2.7 2.7 0 1 1 47.9 5 A2.7 2.7 0 1 1 53.3 5 A2.7 2.7 0 1 1 47.9 5 A2.7 2.7 0 1 1 42.5 5" fill="none" stroke="#CD212A" stroke-width="1"/>
+  {{ end }}
+
+  {{ if eq $variant "collaborate" }}
+  {{/* Collaborate: two overlapping speech-bubble outlines, top-right — same coral
+       as the recolored dot. No tails (kept clean at this scale); the overlap
+       itself is what signals two-way conversation. */}}
+  <ellipse cx="45.5" cy="3.5" rx="5.3" ry="3.6" fill="none" stroke="#E89B8F" stroke-width="1"/>
+  <ellipse cx="51.5" cy="7.5" rx="5.3" ry="3.6" fill="none" stroke="#E89B8F" stroke-width="1"/>
+  {{ end }}
+
+  {{ if eq $variant "cv" }}
+  {{/* CV: a small folded-corner document page, top-right — same lavender as the
+       recolored dot. Two short lines inside stand for text, echoing Publications'
+       page-line ticks but drawn as a single compact page rather than a margin
+       pair, to read as "one record" rather than "a shelf of records". */}}
+  <path d="M44 1 L50 1 L53 4 L53 11 L44 11 Z" fill="none" stroke="#9B8FB8" stroke-width="1"/>
+  <path d="M50 1 L50 4 L53 4" fill="none" stroke="#9B8FB8" stroke-width="1"/>
+  <line x1="46" y1="6.5" x2="51" y2="6.5" stroke="#9B8FB8" stroke-width="0.8"/>
+  <line x1="46" y1="8.5" x2="51" y2="8.5" stroke="#9B8FB8" stroke-width="0.8"/>
+  {{ end }}
+
+  {{ if eq $variant "notes" }}
+  {{/* Notes (Blog): the actual Font Awesome 6 "pen-to-square" (fa-edit, \f044)
+       glyph — the exact icon requested — rendered via the vendored FA webfont
+       (already compiled into the site CSS, see scaffold.scss) rather than a
+       hand-drawn approximation. Navy, top-right corner, same position as Talks. */}}
+  <text x="49" y="9" text-anchor="middle" font-family="'Font Awesome 6 Free'" font-weight="900" font-size="11" fill="#05161E">&#xf044;</text>
   {{ end }}
 </svg>

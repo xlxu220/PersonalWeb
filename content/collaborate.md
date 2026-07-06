@@ -5,6 +5,7 @@ layout: sidebar-left
 show_title_as_headline: true
 headline: "Let's work together"
 sidebar:
+  mark: "collaborate"
   image: "/img/profile.jpg"
   title: "Collaborate"
   description: "The best questions have come from outside my field."

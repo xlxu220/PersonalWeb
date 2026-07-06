@@ -4,7 +4,7 @@ description: "From open loop to closed — data that doesn't just check our retr
 layout: sidebar-left
 headline: "The direction: closing the loop"
 sidebar:
-  motif: true
+  mark: "closing-the-loop"
   title: "Closing the loop"
   description: "The problem that drives me now — and why it needs more than one field."
   lists:
