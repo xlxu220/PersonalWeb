@@ -8,8 +8,6 @@
       Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
       <br />
       {{ partial "shared/attribution.html" }}
-      <br />
-      <span class="f7 gray">This is a personal website. The views and materials presented here are my own and do not necessarily reflect the views of NASA or the Jet Propulsion Laboratory.</span>
     </p>
     {{ if and (not .IsHome) (site.Params.socialInFooter) }}
     <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
@@ -20,6 +18,8 @@
       {{ range site.Menus.footer }}
       <a class="dib pv1 ph2 link" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
       {{ end }}
+      <br />
+      <span class="f7 gray db mt2">This is a personal website. The views and materials presented here are my own and do not necessarily reflect the views of NASA or the Jet Propulsion Laboratory.</span>
     </div>
   </nav>
   {{ with site.Params.math }}
