@@ -1,0 +1,21 @@
+{{/* Project override of theme blog/list-sidebar.html: adds the Notes section mark
+     to the sidebar. The theme version has no mark at all here. */}}
+{{ define "main" }}
+{{ $caller := . }}
+<main class="page-main pa4 {{ .Kind }}" role="main">
+  <section class="blog-content mw7 center">
+    {{ $paginator := .Paginate (where .RegularPagesRecursive "Type" "blog").ByDate.Reverse }}
+      {{ range $paginator.Pages }}
+        {{ .Scratch.Set "$root" $caller }}
+        {{ partial "shared/summary" . }}
+      {{ end }}
+    {{ partial "shared/list-pagination.html" . }}
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+  <div class="ph4 pt4">
+    {{ partial "shared/section-mark.html" "notes" }}
+  </div>
+  {{ partial "shared/sidebar-scaffold.html" . }}
+</aside>
+{{ end }}

@@ -1,0 +1,12 @@
+<!--Project override of theme partials/shared/sidebar/sidebar-header.html: bumps
+the sidebar title/description to the same f2/f5 scale used by the topic-hub,
+projects, and publications sidebars (layouts/_default/topic-hub.html,
+layouts/_default/projects.html, layouts/publications.html) and by
+layouts/_default/sidebar-left.html. The theme default (f3/f6) reads noticeably
+smaller than those, so Talks/Blog/Notes sidebars looked out of step. -->
+<!--section level-->
+{{ with .Params.sidebar }}
+  {{ with .title }}<h1 class="f2 mt0 lh-title">{{ . | markdownify }}</h1>{{ end }}
+  {{ with .description }}<p class="f5 lh-copy measure">{{ . | markdownify }}</p>{{ end }}
+  {{ with .author }}<p class="f7 measure lh-copy i mh0-l">Written by {{ . | markdownify }}</p>{{ end }}
+{{ end }}

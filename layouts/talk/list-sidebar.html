@@ -1,0 +1,28 @@
+{{/* Project override of theme talk/list-sidebar.html: adds the Talks section mark
+     to the sidebar. The theme version has no mark at all here. */}}
+{{ define "main" }}
+{{ $caller := . }}
+<main class="page-main pa4 {{ .Kind }}" role="main">
+  <section class="blog-content mw7 center">
+    {{ $caller := . }}
+    {{ $paginator := .Paginate ((where .RegularPages "Type" .Section).GroupByDate "2006") }}
+    {{ range $paginator.PageGroups }}
+    <!--each year starts a new section-->
+    <section class="group-content pb3 pb4-ns bt">
+      <h5 class="f4 fw7 tracked ttu lh-title mv3">{{ .Key | title }}</h5>
+      {{ range .Pages }}
+          {{ .Scratch.Set "$root" $caller }}
+          {{ partial "shared/summary-compact.html" . }}
+      {{ end }}
+    </section>
+    {{ end }}
+    {{ partial "shared/list-pagination.html" . }}
+  </section>
+</main>
+<aside class="page-sidebar" role="complementary">
+  <div class="ph4 pt4">
+    {{ partial "shared/section-mark.html" "talks" }}
+  </div>
+  {{ partial "shared/sidebar-scaffold.html" . }}
+</aside>
+{{ end }}

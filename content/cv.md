@@ -1,12 +1,34 @@
 ---
 title: "CV"
-description: "Curriculum vitae."
-layout: standard
+description: "Curriculum vitae — appointments, education, awards, and professional activities."
+layout: sidebar-left
 show_title_as_headline: true
 headline: "Curriculum Vitae"
+sidebar:
+  mark: "cv"
+  image: "/img/profile.jpg"
+  title: "Xiaolan Xu"
+  description: "Research Scientist, NASA JPL."
+  badge: "2020 URSI Santimay Basu Prize"
+  lists:
+    - heading: "At a glance"
+      items:
+        - "Ph.D. / M.S., Electrical Engineering — U. Washington, 2011"
+        - "~70 publications · 1,950 citations · h-index 21"
+        - "PI — SMAP–NISAR algorithm & CYGNSS V3 SM/VOD (NASA ROSES)"
+  links:
+    - name: "Download CV (PDF)"
+      url: "/files/cv.pdf"
+    - name: "Full publication record"
+      url: "/publication/"
+    - name: "Google Scholar"
+      url: "https://scholar.google.com/citations?user=TGNYXa8AAAAJ&hl=en"
 ---
 
-<a class="button button--primary" href="/files/cv.pdf">Download CV (PDF) &darr;</a>
+<!-- static/files/cv.pdf is currently a 21-byte placeholder, not a real export —
+     see chat: need Xiaolan to confirm which source doc is the public CV before
+     replacing it (candidates found in 03_Career/00_career-strategy/ are geared
+     to a specific internal application, not necessarily public-appropriate). -->
 
 ## Appointments
 

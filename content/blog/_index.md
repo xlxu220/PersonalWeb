@@ -1,7 +1,7 @@
 ---
 title: "Blog"
 description: "Notes and thinking on remote sensing, retrieval algorithms, and the science behind them."
-show_post_thumbnail: true
+show_post_thumbnail: false
 show_author_byline: false
 show_post_date: true
 layout: list-sidebar

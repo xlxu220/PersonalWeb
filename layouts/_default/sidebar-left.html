@@ -16,14 +16,16 @@
   {{ with .Params.sidebar }}
   <div class="blog-info ph4 pt4 pb4">
 
+    {{ with .mark }}{{ partial "shared/section-mark.html" . }}{{ end }}
+
     {{ with .image }}<img src="{{ . | relURL }}" class="db ma0 mb3 br-100" style="width:150px;height:150px;object-fit:cover;border:3px solid #0D8758;" alt="">{{ end }}
 
     {{ if .motif }}
       {{ partial "shared/logo-motif.html" . }}
     {{ end }}
 
-    {{ with .title }}<h1 class="f3 mt0">{{ . | markdownify }}</h1>{{ end }}
-    {{ with .description }}<p class="f6 lh-copy measure">{{ . | markdownify }}</p>{{ end }}
+    {{ with .title }}<h1 class="f2 mt0 lh-title">{{ . | markdownify }}</h1>{{ end }}
+    {{ with .description }}<p class="f5 lh-copy measure">{{ . | markdownify }}</p>{{ end }}
 
     {{ with .badge }}<p class="mt3 mb0"><span class="dib br2 ph2 pv1 f7" style="background:#FCEB9D;color:#05161E;">{{ . | markdownify }}</span></p>{{ end }}
 
