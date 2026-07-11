@@ -9,7 +9,13 @@ sidebar:
   image: "/img/profile.jpg"
   title: "Xiaolan Xu"
   description: "Research Scientist, NASA JPL."
-  badge: "2020 URSI Santimay Basu Prize"
+  badges:
+    - name: "2020 URSI Santimay Basu Prize"
+      url: "https://usncursi.org/international_awardees.php"
+    - name: "Associate Editor, IEEE TGRS"
+      url: "https://www.grss-ieee.org/publications/author-resources/tgrs-editorial-board/"
+    - name: "2022 J-STARS Prize Paper Award"
+      url: "https://www.grss-ieee.org/about/history/grss-past-awards/"
   lists:
     - heading: "At a glance"
       items:
@@ -43,6 +49,7 @@ Profiled on JPL's official Radar Science pages: [Soil Moisture](https://www.jpl.
 
 - [Featured Article, *IEEE Transactions on Antennas and Propagation*, 2024 Women's Day](https://ieeeaps.org/ieee-tap/for-readers/2024-womens-day)
 - JPL Team Award, 2024 — SMAP SDS cloud transition
+- [2022 J-STARS Prize Paper Award](https://www.grss-ieee.org/about/history/grss-past-awards/) — "A Satellite Synthetic Aperture Radar Concept Using P-Band Signals of Opportunity" (Yueh, Shah, Xu, Stiles), [IEEE JSTARS](https://doi.org/10.1109/JSTARS.2021.3059242)
 - [2020 URSI Santimay Basu Prize](https://usncursi.org/international_awardees.php) — "For Developments in Wave Propagation and Scattering in Dense Random Media with Applications to Microwave Remote Sensing of Snow"
 - 2018 IEEE AP-S Ulrich L. Rohde Innovative Conference Paper Award
 - NASA Group Achievement Award — SMAP Science and Cal/Val Team

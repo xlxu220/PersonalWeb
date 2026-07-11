@@ -27,7 +27,8 @@
     {{ with .title }}<h1 class="f2 mt0 lh-title">{{ . | markdownify }}</h1>{{ end }}
     {{ with .description }}<p class="f5 lh-copy measure">{{ . | markdownify }}</p>{{ end }}
 
-    {{ with .badge }}<p class="mt3 mb0"><span class="dib br2 ph2 pv1 f7" style="background:#FCEB9D;color:#05161E;">{{ . | markdownify }}</span></p>{{ end }}
+    {{ with .badge }}<p class="mt3 mb0"><span class="dib br2 ph2 pv1 f7 mb1" style="background:#FCEB9D;color:#05161E;">{{ . | markdownify }}</span></p>{{ end }}
+    {{ with .badges }}<div class="mt3">{{ range . }}<div class="mb1">{{ if .url }}<a href="{{ .url | safeURL }}" target="_blank" rel="noopener" class="dib br2 ph2 pv1 f7 link" style="background:#FCEB9D;color:#05161E;">{{ .name | markdownify }}</a>{{ else }}<span class="dib br2 ph2 pv1 f7" style="background:#FCEB9D;color:#05161E;">{{ .name | markdownify }}</span>{{ end }}</div>{{ end }}</div>{{ end }}
 
     {{ with .jumplinks }}
       <nav class="mt3" aria-label="On this page">
