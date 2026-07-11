@@ -28,6 +28,10 @@ related:
     items:
       - name: "All talks"
         url: "/talk/"
+  - heading: "Featured by JPL"
+    items:
+      - name: "Official profile — Soil Moisture"
+        url: "https://www.jpl.nasa.gov/go/radar-science/hydrology/soil-moisture/"
 ---
 
 I develop the algorithms that read soil moisture from radar and radiometer measurements at **L-band** — the approach behind NASA's SMAP mission, carried forward into the joint **SMAP–NISAR** algorithm, and extended to reflected navigation-satellite signals through **CYGNSS**, where I built JPL's soil-moisture product.

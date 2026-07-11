@@ -24,6 +24,10 @@ related:
     items:
       - name: "All talks"
         url: "/talk/"
+  - heading: "Featured by JPL"
+    items:
+      - name: "Official profile — Snow"
+        url: "https://www.jpl.nasa.gov/go/radar-science/hydrology/snow/"
 ---
 
 For more than a decade I've worked on estimating how much water a snowpack holds — its **snow water equivalent** — from radar. More recent work uses the **phase** of radar signals across repeat passes (InSAR) to track seasonal snow.
